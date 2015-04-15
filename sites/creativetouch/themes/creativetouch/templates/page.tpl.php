@@ -161,40 +161,42 @@ if (drupal_is_front_page()) { ?>
 <div class="banner"> 
 <div class="slider-container" id="slider-container">
 	<div class="slider">
-		<div>
+		<!--<div>
 			<img src="<?php echo base_path().path_to_theme();?>/images/banner.jpg" alt="">
-			<!--<div style="position: absolute; width: 970px; height:130px; top: 110px; left: 300px; padding: 0px;
+			<div style="position: absolute; width: 970px; height:130px; top: 110px; left: 300px; padding: 0px;
                     text-align: left; line-height: 36px; font-family:Tahoma; font-weight:bold; font-size: 33px;
                         color: #FFFFFF;">
                         Richer Recruitment Services hopes that the workers<br /> 
                         or helpers we bring in may help out and bring a smile<br />
                         to your esteem company, family and children.
-                </div>-->
-		</div>
+                </div>
+		</div>-->
 		
-		<div>
+		<!--<div>
 			<img src="<?php echo base_path().path_to_theme();?>/images/banner.jpg" alt="">
-			<!--<div style="position: absolute; width: 970px; height:130px; top: 110px; left: 300px; padding: 0px;
+			<div style="position: absolute; width: 970px; height:130px; top: 110px; left: 300px; padding: 0px;
                     text-align: left; line-height: 36px; font-family:Tahoma; font-weight:bold; font-size: 33px;
                         color: #FFFFFF;">
                         Richer Recruitment Services hopes that the workers<br /> 
                         or helpers we bring in may help out and bring a smile<br />
                         to your esteem company, family and children.
-                </div>-->
+            </div>-->
 		</div>
 	</div>
 </div>
-	<div class="switch" id="prev"><span></span></div>
-	<div class="switch" id="next"><span></span></div>
+	<!--<div class="switch" id="prev"><span></span></div>
+	<div class="switch" id="next"><span></span></div>-->
  </div>
 
 <!---->
-	<div class="below-banner">
+<div class="below-banner">
   <div class="below-content">
-    <div class="title">ABOUT US</div>
+  
+  	
+   <!-- <div class="title">ABOUT US</div>
     <div class="ab-content"> Creative Touch Design offers clients services throughout any or all phases of interior aspects of their HDBs, condominiums, retails and commercial spaces & corporate offices. </div>
     <div class="find-area">
-      <div class="find-more"><a href="#">FIND OUT MORE</a><img src="images/arrow.jpg" /></div>
+      <div class="find-more"><a href="#">FIND OUT MORE</a><img src="images/arrow.jpg" /></div>-->
     </div>
   </div>
 </div>
@@ -255,162 +257,19 @@ if (drupal_is_front_page()) { ?>
 		print render($page['content']);
 	?>
     </div>
-    <?php //if($path_alias == 'coursecrriculum' || $path_alias == 'courseoverview'):?>
-    
-    <!-- /.section, /#sidebar-second -->
-     <?php 	if (count($page['course_overview_preschool'])!='0' || count($page['course_overview_prischool'])!='' || count($page['course_overview_teen'])!='' ){	 ?>
-    <div class="sidebar">
-    	<div class="top-accordian">
-        <div class="head-side" id="curiover"><a href="<?php echo base_path().'courseoverview'?>">COURSE OVERVIEW</a></div>
-       <div id="faqs-container" class="accordian">        
-        <div class="head-side" id="curi"><a href="<?php echo base_path().'coursecrriculum'?>" id="curriculm">COURSE CURRICULM</a></div>
-        <div class="accordian">
-          <div class="school"><a href="#">Pre-School</a></div>
-          <div class="accordian">
-            <div class="accordian-wrap">
-              <?php 
-			if ($page['course_overview_preschool']){
-				print render($page['course_overview_preschool']);
-			}?>
-            </div>
-          </div>
-          <div class="school"><a href="#">Primary School Children</a></div>
-          <div class="accordian">
-            <div class="accordian-wrap">
-              <?php 
-			if ($page['course_overview_prischool']){
-				print render($page['course_overview_prischool']);
-			}?>
-            </div>
-          </div>
-          <div class="school"><a href="#">Teens and Youth</a></div>
-          <div class="accordian">
-            <div class="accordian-wrap">
-              <?php 
-			if ($page['course_overview_teen']){
-				print render($page['course_overview_teen']);
-			}?>
-            </div>
-          </div>
-        </div>
-      </div>
-      </div>
-      <div class="books-area">
-      		<div class="book-title">Free book</div>
-            <div class="book-img"><a href="#"><img src="<?php echo base_path().path_to_theme();?>/images/book.png" /></a></div>
-            <div class="book-detail">Loren Ispuum</div>
-            <div class="book-sub">By Ispum Dolor</div>
-            <div class="download-btn"><a href="#"><img src="<?php echo base_path().path_to_theme();?>/images/download-btn.png" /></a></div>
-            
-      </div>
-    </div>
-    <!-- /.section, /#sidebar-second -->
-    <?php }
-	
-	//endif; ?>
-    <?php //print render($page['sidebar_second']); ?>
+
   </div>
 </div>
 
 <!-- /#page, /#page-wrapper -->
 <div class="clear"></div>
-<div class="footer">
-  <div class="camp-area">
-    <div class="camp-wrap">
-      <div class="camp-title">Our Camps & Workshops</div>
-      <div class="camp-detail-area">
-        <div class="box1">
-          <div class="box-detail">
-            <?php 
-			if ($page['footer_firstcolumn']){
-				print render($page['footer_firstcolumn']);
-			}?>
-          </div>
-        </div>
-        <div class="box1">
-          <div class="box-detail">
-            <?php
-          if ($page['footer_secondcolumn']){ 
-	      	print render($page['footer_secondcolumn']);
-		  }
-		  ?>
-          </div>
-        </div>
-        <div class="box2">
-          <div class="box-detail">
-          <div class="f-logo">
-            <?php
-          if ($page['footer_thirdcolumn']){ 
-	      	print render($page['footer_thirdcolumn']);
-		  }
-		  ?>
-          </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="footer-wrap">
-    <div class="footer-area">
-      <div class="copy">
-        <?php if ($page['footer_copyright']): print render($page['footer_copyright']); endif; ?>
-      </div>
-      <div class="clear"></div>
-      <div class="footer-nav">
-        <?php if ($page['footer_links']): print render($page['footer_links']); endif; ?>
-      </div>
-      <div class="designed">
-        <?php if ($page['developed_by']): print render($page['developed_by']); endif; ?>
-      </div>
-    </div>
-  </div>
-</div>
-<?php //print render($page['sidebar_second']); ?>
-<!-- /.section, /#footer-wrapper --> 
-<script>
-	$("#slider-container").sliderUi({
-		speed: 700,
-		cssEasing: "cubic-bezier(0.285, 1.015, 0.165, 1.000)"
-	});
-	$("#caption-slide").sliderUi({
-		caption: true
-	});
-</script> 
-<script type="text/javascript">
- $(document).ready(function (){
-    $("#curiover").addClass("highlight");
-    $("div.head-side").click(function () {
-        $("div.head-side").removeClass("highlight");
-        
-        if($(".head-side").is(":visible") ) {
-            $(this).addClass("highlight");
-        }
-    });  
-	$("div.accordian").accordion({
-		autoHeight: false,
-		collapsible: true,
-		active: false,
-		
-	});
-	
-$('#block-menu-menu-side-pre-school a').on('click', function () {
-  window.location.href = $(this).attr('href');
-});
-$('#block-menu-menu-side-primary-school-childre a').on('click', function () {
-  window.location.href = $(this).attr('href');
-});
-$('#block-menu-menu-side-teens-and-youth a').on('click', function () {
-  window.location.href = $(this).attr('href');
-});
-	/*$('.content a').on('click', function () {
-  window.location.href = $(this).attr('href');
-});*/
 
-	<?php 
-	if (count($page['course_overview_preschool'])!='0' || count($page['course_overview_prischool'])!='' || count($page['course_overview_teen'])!='' ){	 ?>
-	//if('<?php echo $path_alias;?>'=='coursecrriculum' || '<?php echo $path_alias;?>'=='courseoverview'){
-	 $('#<?php echo $path_alias;?>').addClass('left-content');
-	//}
- <?php } ?>
- });
- </script> 
+<footer>
+  <div class="footer-top-black"></div>
+  <div class="footer-bottom"></div>
+  <div class="footer-wrap">
+    <div class="copy-area"><?php if ($page['footer_copyright']): print render($page['footer_copyright']); endif; ?></div>
+    <div class="designed"> <?php if ($page['developed_by']): print render($page['developed_by']); endif; ?></div>
+  </div>
+</footer>
+

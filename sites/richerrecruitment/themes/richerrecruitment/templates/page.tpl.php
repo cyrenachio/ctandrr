@@ -112,22 +112,7 @@
                                   ),
                                 )); ?>
             <?php endif; ?>
-            
-            <!--<?php if ($secondary_menu): ?>
-        <div id="secondary-menu" class="navigation"> <?php print theme('links__system_secondary_menu', array(
-          'links' => $secondary_menu,
-          'attributes' => array(
-            'id' => 'secondary-menu-links',
-            'class' => array('links', 'inline', 'clearfix'),
-          ),
-          'heading' => array(
-            'text' => t('Secondary menu'),
-            'level' => 'h2',
-            'class' => array('element-invisible'),
-          ),
-        )); ?> </div>
-        <!-- /#secondary-menu -->
-            <?php endif; ?>
+
           </nav>
         </div>
       </div>
@@ -143,21 +128,29 @@
   <?php endif; ?>
   <?php
 	if (drupal_is_front_page()) { ?>
-	<?php if ($page['home_slider']): print render($page['home_slider']); endif; ?>
+  <?php if ($page['home_slider']): print render($page['home_slider']); endif; ?>
   <?php } ?>
- 
-<?php
+  
+  <?php
 	if (drupal_is_front_page()) { ?>
   <div class="services">
     <div class="services-wrap"> 
-      
-      <!--<div class="container-wrap">
-<div class="content-area">--> 
-      <?php print render($page['content']); ?> 
+      <?php print render($page['content']); ?> </div>
   </div>
+  <?php } else{?>
+  
+  <div class="container-wrap">
+    <div class="content-area"> 
+		<?php print render($page['content']); //}?> </div>
+    <div class="right-side-area">
+      <div class="nav-side-bar">
+      	<?php print render($page['sidebar_first']); ?>
+      </div>
+    </div>
   </div>
+  <?php } ?>
 </div>
-<?php } ?>
+
 <footer>
   <div class="footer-wrap">
     <div class="footer-wrap-inner">
@@ -177,8 +170,7 @@
 			if ($page['footer_secondcolumn']){
 				print render($page['footer_secondcolumn']);
 			}?>
-          <!--<div class="fb"><a href="#"><img src="images/fb-link.png" /></a> </div>
-          <div class="linked-in"> <a href="#"><img src="images/in-link.png" /></a> </div>--> 
+        
         </div>
       </div>
       <?php // if ($page['footer_thirdcolumn']){	print render($page['footer_thirdcolumn']); }?>
@@ -198,14 +190,10 @@
     <div class="footer-nav-wrap">
       <div class="copy-right">
         <?php if ($page['footer_copyright']): print render($page['footer_copyright']); endif; ?>
-        <!-- &copy; 2015 Richer Recruitment Services &nbsp; Pte Ltd. All rights reserved --></div>
+      </div>
       <div class="footer-menu">
         <?php if ($page['footer_links']): print render($page['footer_links']); endif; ?>
-        <!--<ul>
-          <li><img src="images/border.jpg" /><a href="#">terms of use & disclaimers</a></li>
-          <li><img src="images/border.jpg" /><a href="#">privacy policy</a></li>
-          <li><img src="images/border.jpg" /><a href="#">site map</a></li>
-        </ul>--> 
+         
       </div>
       <div class="development-ref">
         <?php if ($page['developed_by']): print render($page['developed_by']); endif; ?>
