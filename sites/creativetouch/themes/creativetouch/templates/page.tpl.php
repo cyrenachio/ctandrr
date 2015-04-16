@@ -189,78 +189,36 @@ if (drupal_is_front_page()) { ?>
  </div>
 
 <!---->
+ <?php
+	if (drupal_is_front_page()) { ?>
+  <?php if ($page['home_slider']): print render($page['home_slider']); endif; ?>
+  
 <div class="below-banner">
   <div class="below-content">
   
-  	
-   <!-- <div class="title">ABOUT US</div>
-    <div class="ab-content"> Creative Touch Design offers clients services throughout any or all phases of interior aspects of their HDBs, condominiums, retails and commercial spaces & corporate offices. </div>
-    <div class="find-area">
-      <div class="find-more"><a href="#">FIND OUT MORE</a><img src="images/arrow.jpg" /></div>-->
-    </div>
-  </div>
-</div>
-
-
-<!---->
-
-<?php
-	if (drupal_is_front_page()) { ?>
-<div class="baner-area">
-  <div class="Mainbanner-box">
-    <div class="slider-container" id="slider-container">
-      <div class="slider">
-        <div> <img src="<?php echo base_path().path_to_theme();?>/images/banner.png" alt=""> </div>
-        <div> <img src="<?php echo base_path().path_to_theme();?>/images/banner.png" alt=""> </div>
-      </div>
-    </div>
-  </div>
-  <div class="clear"></div>
-  <div class="banner-bottom">
-    <div class="banner-box">
-      <div class="shadow-top"></div>
-      <div class="banner-detail-main">
-        <div class="banner-detail">
-          <?php if ($page['home_page_top']){ 
+  	<?php if ($page['home_page_top']){ 
 			print render($page['home_page_top']);
-		}?>
-        </div>
-      </div>
-      <div class="shadow-bottom"></div>
+	}?>
     </div>
   </div>
 </div>
 <?php } ?>
-<div class="clear"></div>
-<div class="content">
-  <div class="content-area">
-    <div id="<?php echo $path_alias;?>"> <a id="main-content"></a> <?php print render($title_prefix); ?>
-      <?php 
-	//check the home page...
-	if (!drupal_is_front_page()) {
-		if ($title): ?>
-      <div class="page-title"><?php print $title; ?></div>
-      <?php endif; 
-		}
-	?>
-      <?php print render($title_suffix); ?>
-      <?php if ($tabs): ?>
-      <div class="tabs"> <?php print render($tabs); ?> </div>
-      <?php endif; ?>
-      <?php print render($page['help']); ?>
-      <?php if ($action_links): ?>
-      <ul class="action-links">
-        <?php print render($action_links); ?>
-      </ul>
-      <?php endif; ?>
-      <?
-		print render($page['content']);
-	?>
+
+<!---->
+
+<div class="content-area">
+    <div class="Main-content">
+     <?php print render($page['content']); ?>
+     
+     <div class="services-area">
+     	
+        	<?php if ($page['home_services_area']){ 
+			print render($page['home_services_area']);
+	}?>
+        
+     </div>
     </div>
-
-  </div>
 </div>
-
 <!-- /#page, /#page-wrapper -->
 <div class="clear"></div>
 

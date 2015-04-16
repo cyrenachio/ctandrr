@@ -25,6 +25,9 @@ function creativetouch_preprocess_html(&$variables) {
   if (!empty($variables['page']['home_page_top'])){
     $variables['classes_array'][] = 'home_page_top';
   }
+  if (!empty($variables['page']['home_services_area'])){
+    $variables['classes_array'][] = 'home_services_area';
+  }
    
   if (!empty($variables['page']['footer_firstcolumn'])){
     $variables['classes_array'][] = 'footer_firstcolumn';

@@ -20,6 +20,7 @@ regions[top_search] = Top Search
 
 regions[home_slider] = Home Slider
 regions[content] = Content
+regions[home_services_area] = Home Services Area
 regions[sidebar_first] = Sidebar first
 regions[sidebar_second] = Sidebar second
 
