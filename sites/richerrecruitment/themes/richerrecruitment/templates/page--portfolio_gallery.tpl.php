@@ -84,6 +84,9 @@
  * @see bartik_process_page()
  * @see html.tpl.php
  */
+ 
+drupal_add_css(path_to_theme() . '/css/tabs/tabsstyle.css', array('group' => CSS_THEME,'preprocess' => FALSE));
+$images = '';
 ?>
 
 <header>
@@ -100,76 +103,122 @@
           <nav>
             <?php if ($main_menu): ?>
             <?php print theme('links__system_main_menu', array(
-                                  'links' => $main_menu,
-                                  'attributes' => array(
-                                    'id' => 'main-menu-links',
-                                    'class' => array('links', 'clearfix'),
-                                  ),
-                                  'heading' => array(
-                                    'text' => t('Main menu'),
-                                    'level' => 'h2',
-                                    'class' => array('element-invisible'),
-                                  ),
-                                )); ?>
+				  'links' => $main_menu,
+				  'attributes' => array(
+					'id' => 'main-menu-links',
+					'class' => array('links', 'clearfix'),
+				  ),
+				  'heading' => array(
+					'text' => t('Main menu'),
+					'level' => 'h2',
+					'class' => array('element-invisible'),
+				  ),
+				)); ?>
             <?php endif; ?>
-
           </nav>
         </div>
       </div>
     </div>
   </div>
 </header>
-<div class="container">
-  <?php if ($messages): ?>
-  <div id="messages">
-    <div class="section clearfix"> <?php print $messages; ?> </div>
-  </div>
-  <!-- /.section, /#messages -->
-  <?php endif; ?>
-  <?php
-	if (drupal_is_front_page()) { ?>
-  <?php if ($page['home_slider']): print render($page['home_slider']); endif; ?>
-  <?php } ?>
-  <?php if ($tabs): ?>
-      <div class="tabs"> <?php print render($tabs); ?> </div>
-      <?php endif; ?>
-      <?php print render($page['help']); ?>
-      <?php if ($action_links): ?>
-      <ul class="action-links">
-        <?php print render($action_links); ?>
-      </ul>
-      <?php endif; ?>
-  <?php
-	if (drupal_is_front_page()) { ?>
-  <div class="services">
-    <div class="services-wrap"> 
-      <?php print render($page['content']); ?> </div>
-  </div>
-  <?php } else{?>
-  
-  <div class="container-wrap">
-  <?php
-  if($_SERVER['REQUEST_URI']=='/contact-us'){
-	  $mystyle = 'style="width:100% !important"';
-  }else
-  {
-	  $mystyle = '';
-  }
-  ?>
-    <div class="content-area" <?php echo $mystyle; ?>>
-		<?php
-		print render($page['content']); //}?> </div>
-     <?php if ($page['sidebar_first']){?>
-    <div class="right-side-area">
-      <div class="nav-side-bar">
-      	<?php print render($page['sidebar_first']); ?>
-      </div>
-    </div>
-    <?php }?>
-  </div>
-  <?php } ?>
+<?php if ($messages): ?>
+<div id="messages">
+  <div class="section clearfix"> <?php print $messages; ?> </div>
 </div>
+<!-- /.section, /#messages -->
+<?php endif; ?>
+<?php 
+	//for gallery category   
+   $categoryGArr = taxonomy_get_tree($vid = 2, $parent = 0, $max_depth = NULL, $load_entities = FALSE);
+   ?>
+<div class="content-area-pf">
+  <div class="content-area-wrap">
+    <div class="gallery"> <i>Gallery</i> </div>
+    <div class="tabs-area">
+      <ul id="tabs">
+        <li class="active">All</li>
+        <?php
+        foreach($categoryGArr as $cat){
+			echo '<li>'.$cat->name.'</li>';
+		}
+        ?>
+      </ul>
+      <ul id="tab">
+        <li class="active">
+          <?php
+        foreach($categoryGArr as $cat){
+			?>
+          <?php
+             $GalleryArr = taxonomy_select_nodes($tid = $cat->tid, $pager = TRUE, $limit = 10, $order = array('t.sticky' => 'DESC', 't.created' => 'DESC'));
+			 foreach($GalleryArr as $key=>$image){
+			 $images = node_load($nid = $image, $vid = NULL, $reset = FALSE);
 
+			 //for URL
+			 if(isset($images->field_portfolio_url[$images->language][0]['value'])){
+				$P_URL = $images->field_portfolio_url[$images->language][0]['value'];
+			 }else{
+				 $P_URL = '#';
+			 }
+			 //for image
+				if(isset($images->field_portfolio_image[$images->language][0]['uri'])){
+				 $style = 'medium';
+				 $filePath = $images->field_portfolio_image[$images->language][0]['uri'];
+				 $imageSrc = image_style_url($style, $filePath);
+				}else
+				{
+				 $imageSrc = base_path().path_to_theme().'/images/default.jpg';
+				}
+				?>
+          <div class="pf-services">
+            <div class="pf-imgs"> <a href="<?php echo $P_URL;?>" target="_blank" title="<?php echo $images->title;?>"><img title="<?php echo $images->title;?>" src="<?php echo $imageSrc;?>" /></a> </div>
+            <div class="pf-imgs-text"> <a href="<?php echo $P_URL;?>" target="_blank" title="<?php echo $images->title;?>"><?php echo $images->title;?></a> </div>
+          </div>
+          <?php
+			 }
+		}
+			?>
+        </li>
+        <?php
+        foreach($categoryGArr as $cat){
+			?>
+        <li>
+          <?php
+             $GalleryArr = taxonomy_select_nodes($tid = $cat->tid, $pager = TRUE, $limit = 10, $order = array('t.sticky' => 'DESC', 't.created' => 'DESC'));
+			 foreach($GalleryArr as $key=>$image){
+			 $images = node_load($nid = NULL, $vid = $image, $reset = FALSE);
+
+			 //for URL
+			 if(isset($images->field_portfolio_url[$images->language][0]['value'])){
+				$P_URL = $images->field_portfolio_url[$images->language][0]['value'];
+			 }else{
+				 $P_URL = '#';
+			 }
+			 //for image
+				if(isset($images->field_portfolio_image[$images->language][0]['uri'])){
+				 $style = 'medium';
+				 $filePath = $images->field_portfolio_image[$images->language][0]['uri'];
+				 $imageSrc = image_style_url($style, $filePath);
+				}else
+				{
+				 $imageSrc = base_path().path_to_theme().'/images/default.jpg';
+				}
+				?>
+          <div class="pf-services">
+            <div class="pf-imgs"> <a href="<?php echo $P_URL;?>"><img src="<?php echo $imageSrc;?>" /></a> </div>
+            <div class="pf-imgs-text"> <a href="<?php echo $P_URL;?>"><?php echo $images->title;?></a> </div>
+          </div>
+          <?php
+			 }
+			?>
+        </li>
+        <?php
+		}
+        ?>
+      </ul>
+      <!--<div class="pagination clearfix"> <a href="#" style="padding:2px; margin:0px; border:0;"><img style="vertical-align:middle;" src="images/right-arrow-page.jpg" /></a> <a href="#" style="padding:0px; margin:0px; border:0;"><img style="vertical-align:middle;" src="images/right-arrow-page_2.jpg" /></a>&nbsp; <strong>1</strong> <a href="#">2</a> <a href="#">3</a> <a href="#">4</a> <a href="#">5</a>&nbsp; <a href="#" style="padding:2px; margin:0px; border:0; "><img style="vertical-align:middle;" src="images/left-arrow-page_2.jpg" /></a> <a href="#" style="padding:0px; margin:0px; border:0;"><img style="vertical-align:middle;" src="images/left-arrow-page.jpg" /></a> </div>-->
+    </div>
+  </div>
+</div>
 <footer>
   <div class="footer-wrap">
     <div class="footer-wrap-inner">
@@ -189,7 +238,6 @@
 			if ($page['footer_secondcolumn']){
 				print render($page['footer_secondcolumn']);
 			}?>
-        
         </div>
       </div>
       <?php // if ($page['footer_thirdcolumn']){	print render($page['footer_thirdcolumn']); }?>
@@ -212,7 +260,6 @@
       </div>
       <div class="footer-menu">
         <?php if ($page['footer_links']): print render($page['footer_links']); endif; ?>
-         
       </div>
       <div class="development-ref">
         <?php if ($page['developed_by']): print render($page['developed_by']); endif; ?>
@@ -221,7 +268,17 @@
   </div>
   </div>
 </footer>
-<div id="page-wrapper"> 
-  <!-- text doc --> 
-</div>
-<!-- /#page, /#page-wrapper --> 
+<script type="text/javascript">
+$(document).ready(function(){
+    $("ul#tabs li").click(function(e){
+        if (!$(this).hasClass("active")) {
+            var tabNum = $(this).index();
+            var nthChild = tabNum+1;
+            $("ul#tabs li.active").removeClass("active");
+            $(this).addClass("active");
+            $("ul#tab li.active").removeClass("active");
+            $("ul#tab li:nth-child("+nthChild+")").addClass("active");
+        }
+    });
+});
+</script>
