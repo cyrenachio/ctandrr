@@ -91,7 +91,7 @@ $path_alias = drupal_lookup_path('alias',$path);
 <?php
 if (drupal_is_front_page()) { ?>
 <style type="text/css">
-.region-content{ width:955px; margin-bottom:30px; float:left; margin-top:10px;}
+.region-content{ width:955px; margin-bottom:0px; float:left; margin-top:0px;}
 </style>
 <?php }?>
 
@@ -226,9 +226,15 @@ if (!drupal_is_front_page()) {
       <?php endif; ?>
       
       <?php print render($title_prefix); ?>
-  <?php if ($page): ?>
+  
+  <?php 
+  if (!drupal_is_front_page()) { 
+  if ($page): ?>
       <div<?php print $title_attributes; ?> class="page-title"><?php print $title; ?></div>
-  <?php endif; ?>
+  <?php endif; 
+  }
+  ?>
+  
   <?php print render($title_suffix); ?>
   
      <?php print render($page['content']); ?>

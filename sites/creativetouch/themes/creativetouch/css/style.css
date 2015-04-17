@@ -143,7 +143,7 @@ form {
 .find-area {
 }
 .gallery-img {
-	margin: 35px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
 	float: left;
 	width: 100%
 }
@@ -199,15 +199,20 @@ form {
 	font-weight: bold;
 	font-size: 28px;
 	font-family: "Century Gothic";
-	margin: 60px 0px 40px 0px;
+	margin: 30px 0px 40px 0px;
 	text-align: center
 }
-<!--.services-box {
+/*.services-box {
 	width: 225px;
 	float: left;
 	margin-right: 15px;
 	margin-bottom: 25px;
-}-->
+}*/
+
+.gallery-box{	width: 225px;
+	float: left;
+	margin-right: 15px;
+	margin-bottom: 25px;}
 .services-area {
 	width: 104%
 }
@@ -493,7 +498,7 @@ form {
 	width: 340px;
 	margin-top: 20px
 }
-#block-block-5{
+/*#block-block-5{
 	width: 225px;
 	float: left;
 	margin-right: 15px;
@@ -541,7 +546,12 @@ form {
 	margin-right: 15px;
 	margin-bottom: 25px;
 }
-
+*/
+#block-block-13{
+margin: 0px 0px 0px 0px;
+float: left;
+width: 100%;
+}
 
 #node-13{float: right;width: 645px;margin-bottom: 20px;}
 #block-block-20{width: 294px; float:left; padding-top:30px;}
@@ -554,10 +564,18 @@ form {
 
 .field-textarea textarea{ width:645px; float:left; height:200px; background:#EEEEEE; border:none; padding:5px 0px 0px 5px; font-family: 'Segoe UI'; margin-bottom:25px; clear:both}
 
-.webform-submit{ background:#2c098d; color:#FFF; padding:10px 60px; border:none ; font-weight:bold; font-size:18px;font-family:"Century Gothic" ; text-align:center}
+.webform-submit{ background:#177C9C; color:#FFF; padding:10px 60px; border:none ; font-weight:bold; font-size:18px;font-family:"Century Gothic" ; text-align:center}
 
 #node-13 .form-actions{text-align:center; margin:20px 0px 0px 0px; clear:both}
 
 .faq-content .faq-question-answer a{font-size: 16px;padding-bottom: 10px;font-family: Georgia;font-style: italic; color:#2c098d !important; text-decoration:none}
 .faq_closed{ background:url(../images/plus-img.png) no-repeat left center;padding-left: 16px;}
 .faq_open{ background:url(../images/minus-img.png) no-repeat left center; padding-left: 16px;}
+
+.region-home-slider{width: 100%;float: left;}
+.theme-default .nivoSlider img {width:100%;}
+.theme-default .nivoSlider{margin-bottom: 0px !important;}
+.region-home-services-area .block{width: 225px;
+float: left;
+margin-right: 15px;
+margin-bottom: 25px;}

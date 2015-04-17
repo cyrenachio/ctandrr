@@ -8,10 +8,9 @@ function creativetouch_preprocess_html(&$variables) {
 	$options = array(
     'group' => JS_THEME,
 	);
-	drupal_add_js(drupal_get_path('themes', 'creativetouch'). '/js/jquery-1.11.1.min.js', $options);
+	drupal_add_js(drupal_get_path('theme', 'creativetouch'). '/js/jquery-1.11.1.min.js', $options);
 	drupal_add_js('http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.js', $options);
-	drupal_add_js(drupal_get_path('themes', 'creativetouch'). '/js/jquery-migrate-1.2.1.js', $options);
-	drupal_add_js(drupal_get_path('themes', 'creativetouch'). '/js/slider.js', $options);
+	drupal_add_js(drupal_get_path('theme', 'creativetouch'). '/js/jquery-migrate-1.2.1.js', $options);
 	
 
   if (!empty($variables['page']['top_search'])){
