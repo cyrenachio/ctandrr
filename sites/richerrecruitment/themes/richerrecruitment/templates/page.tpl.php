@@ -112,7 +112,6 @@
                                   ),
                                 )); ?>
             <?php endif; ?>
-
           </nav>
         </div>
       </div>
@@ -131,24 +130,22 @@
   <?php if ($page['home_slider']): print render($page['home_slider']); endif; ?>
   <?php } ?>
   <?php if ($tabs): ?>
-      <div class="tabs"> <?php print render($tabs); ?> </div>
-      <?php endif; ?>
-      <?php print render($page['help']); ?>
-      <?php if ($action_links): ?>
-      <ul class="action-links">
-        <?php print render($action_links); ?>
-      </ul>
-      <?php endif; ?>
+  <div class="tabs"> <?php print render($tabs); ?> </div>
+  <?php endif; ?>
+  <?php print render($page['help']); ?>
+  <?php if ($action_links): ?>
+  <ul class="action-links">
+    <?php print render($action_links); ?>
+  </ul>
+  <?php endif; ?>
   <?php
 	if (drupal_is_front_page()) { ?>
   <div class="services">
-    <div class="services-wrap"> 
-      <?php print render($page['content']); ?> </div>
+    <div class="services-wrap"> <?php print render($page['content']); ?> </div>
   </div>
   <?php } else{?>
-  
   <div class="container-wrap">
-  <?php
+    <?php
   if($_SERVER['REQUEST_URI']=='/contact-us'){
 	  $mystyle = 'style="width:100% !important"';
   }else
@@ -157,19 +154,26 @@
   }
   ?>
     <div class="content-area" <?php echo $mystyle; ?>>
-		<?php
-		print render($page['content']); //}?> </div>
-     <?php if ($page['sidebar_first']){?>
+    <?php if ($tabs): ?>
+  <div class="tabs"> <?php print render($tabs); ?> </div>
+  <?php endif; ?>
+  <?php print render($page['help']); ?>
+  <?php if ($action_links): ?>
+  <ul class="action-links">
+    <?php print render($action_links); ?>
+  </ul>
+  <?php endif; ?>
+      <?php
+		print render($page['content']); //}?>
+    </div>
+    <?php if ($page['sidebar_first']){?>
     <div class="right-side-area">
-      <div class="nav-side-bar">
-      	<?php print render($page['sidebar_first']); ?>
-      </div>
+      <div class="nav-side-bar"> <?php print render($page['sidebar_first']); ?> </div>
     </div>
     <?php }?>
   </div>
   <?php } ?>
 </div>
-
 <footer>
   <div class="footer-wrap">
     <div class="footer-wrap-inner">
@@ -189,7 +193,6 @@
 			if ($page['footer_secondcolumn']){
 				print render($page['footer_secondcolumn']);
 			}?>
-        
         </div>
       </div>
       <?php // if ($page['footer_thirdcolumn']){	print render($page['footer_thirdcolumn']); }?>
@@ -212,7 +215,6 @@
       </div>
       <div class="footer-menu">
         <?php if ($page['footer_links']): print render($page['footer_links']); endif; ?>
-         
       </div>
       <div class="development-ref">
         <?php if ($page['developed_by']): print render($page['developed_by']); endif; ?>

@@ -205,9 +205,32 @@ if (drupal_is_front_page()) { ?>
 <?php } ?>
 
 <!---->
-
-<div class="content-area">
+<?php
+if (!drupal_is_front_page()) { 
+	$mystyle = 'style="background:none"';
+}else{
+	$mystyle = '';
+}
+?>
+    
+<div class="content-area" <?php echo $mystyle; ?>>
     <div class="Main-content">
+    <?php if ($tabs): ?>
+      <div class="tabs"> <?php print render($tabs); ?> </div>
+      <?php endif; ?>
+      <?php print render($page['help']); ?>
+      <?php if ($action_links): ?>
+      <ul class="action-links">
+        <?php print render($action_links); ?>
+      </ul>
+      <?php endif; ?>
+      
+      <?php print render($title_prefix); ?>
+  <?php if ($page): ?>
+      <div<?php print $title_attributes; ?> class="page-title"><?php print $title; ?></div>
+  <?php endif; ?>
+  <?php print render($title_suffix); ?>
+  
      <?php print render($page['content']); ?>
      
      <div class="services-area">

@@ -246,7 +246,10 @@ form {
 .page-title {
 	font-size: 30px;
 	font-family: "Century Gothic";
-	float: left
+	float: left;
+	width:100%;
+	margin-top: 28px;
+	margin-bottom: 8px;
 }
 .page-banner {
 	height: 340px;
@@ -538,3 +541,23 @@ form {
 	margin-right: 15px;
 	margin-bottom: 25px;
 }
+
+
+#node-13{float: right;width: 645px;margin-bottom: 20px;}
+#block-block-20{width: 294px; float:left; padding-top:30px;}
+/*************Contact Us*****************/
+.margnrght{ margin-right:43px; }
+
+.c-text{ background:#EEEEEE; width:300px; height:32px; border:none;  padding-left:5px;font-family: 'Segoe UI';}
+
+.webform-client-form .field{ float:left; width:300px; margin-bottom:20px;}
+
+.field-textarea textarea{ width:645px; float:left; height:200px; background:#EEEEEE; border:none; padding:5px 0px 0px 5px; font-family: 'Segoe UI'; margin-bottom:25px; clear:both}
+
+.webform-submit{ background:#2c098d; color:#FFF; padding:10px 60px; border:none ; font-weight:bold; font-size:18px;font-family:"Century Gothic" ; text-align:center}
+
+#node-13 .form-actions{text-align:center; margin:20px 0px 0px 0px; clear:both}
+
+.faq-content .faq-question-answer a{font-size: 16px;padding-bottom: 10px;font-family: Georgia;font-style: italic; color:#2c098d !important; text-decoration:none}
+.faq_closed{ background:url(../images/plus-img.png) no-repeat left center;padding-left: 16px;}
+.faq_open{ background:url(../images/minus-img.png) no-repeat left center; padding-left: 16px;}
