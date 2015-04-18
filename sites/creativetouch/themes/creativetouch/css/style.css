@@ -12,7 +12,7 @@ body {
 a, a:active, a:visited, a:hover {
 	text-decoration: none;
 	outline: none;
-	;
+	color:#606060 ;
 }
 p {
 	margin: 0px auto;
@@ -248,7 +248,7 @@ form {
 	width: 100%;
 	margin: 20px 0px 16px 0px;
 }
-.page-title {
+.page-title, .posttitle {
 	font-size: 30px;
 	font-family: "Century Gothic";
 	float: left;
@@ -365,27 +365,25 @@ form {
 	float: left;
 	width: 210px;
 }
-.b-title {
-	text-align: left;
-	font-family: "Segoe UI";
-	font-size: 18px;
-	font-weight: bold
-}
-.b-date {
-	text-align: left;
-	font-family: "Segoe UI";
-	font-size: 14px;
-}
+
+/*************view-archive***************/
+.view-archive .views-row{border-bottom: 3px solid #d8d8d8;	padding-bottom: 18px;float: left;margin-bottom: 20px;}
+.view-archive .views-row .views-field-title{text-align: left;font-family: "Segoe UI";font-size: 18px;font-weight: bold; text-decoration:none;color: #606060 !important;}
+.view-archive .views-row .views-field-created{text-align: left;font-family: "Segoe UI";font-size: 14px;}
+
 .b-detail-area {
 	float: left;
 	margin: 14px 0px 0px 0px;
 }
-.b-img {
+
+.view-archive .views-row  .views-field-field-blog-image{
 	float: left;
 	margin-right: 15px;
 	width: 195px;
 }
-.b-text {
+.view-archive .views-row  .views-field-field-blog-image img{ width:100%}
+
+.view-archive .views-row .views-field-body{
 	float: left;
 	width: 422px;
 	text-align: left;
@@ -394,6 +392,16 @@ form {
 	line-height: 22px;
 	margin-top: -5px;
 }
+.views-more-link{	
+	text-align: left;
+	margin: 15px 0px 0px 0px;
+	float: left;
+	font-family: "Century Gothic";
+	font-size: 14px;
+	color: #4e4e4e;
+	text-transform: uppercase;
+}
+	
 .read-more {
 	text-align: left;
 	margin: 15px 0px 0px 0px;
@@ -408,6 +416,12 @@ form {
 .read-more span {
 	color: #177C9C
 }
+/*************view-archive***************/
+
+/*************view-blog***************/
+.view-blog .views-row{border-bottom: 3px solid #d8d8d8;	padding-bottom: 18px;float: left;margin-bottom: 20px;}
+
+
 .blog-box {
 	border-bottom: 3px solid #d8d8d8;
 	padding-bottom: 18px;
@@ -418,6 +432,66 @@ form {
 	padding-bottom: 18px;
 	float: left;
 }
+
+.view-blog .views-row .views-field-title{text-align: left;font-family: "Segoe UI";font-size: 18px;font-weight: bold; text-decoration:none}
+
+
+.view-blog .views-row .views-field-created{text-align: left;font-family: "Segoe UI";font-size: 14px;}
+
+.b-detail-area {
+	float: left;
+	margin: 14px 0px 0px 0px;
+}
+
+.view-blog .views-row  .views-field-field-blog-image{
+	float: left;
+	margin-right: 15px;
+	width: 195px;
+}
+.view-blog .views-row  .views-field-field-blog-image img{ width:100%}
+
+.view-blog .views-row .views-field-body{
+	float: left;
+	width: 422px;
+	text-align: left;
+	font-size: 14px;
+	font-family: "Segoe UI";
+	line-height: 22px;
+	margin-top: -5px;
+}
+.views-more-link{	
+	text-align: left;
+	margin: 15px 0px 0px 0px;
+	float: left;
+	font-family: "Century Gothic";
+	font-size: 14px;
+	color: #4e4e4e;
+	text-transform: uppercase;
+}
+	
+.read-more {
+	text-align: left;
+	margin: 15px 0px 0px 0px;
+	float: left;
+	font-family: "Century Gothic";
+	font-size: 14px;
+}
+.read-more a {
+	color: #4e4e4e;
+	text-transform: uppercase
+}
+.read-more span {
+	color: #177C9C
+}
+/*************view-blog***************/
+.b-title{text-align: left;font-family: "Segoe UI";font-size: 18px;font-weight: bold; text-decoration:none}
+.b-date{text-align: left;font-family: "Segoe UI";font-size: 14px;}
+.b-img-detail{
+	float: left;
+	margin-right: 15px;
+	width: 195px;
+}
+.b-img-detail img{ width:100%}
 .sidebar-top {
 	height: 95px;
 	width: 200px;
@@ -442,8 +516,9 @@ form {
 	display: block;
 	text-align: left;
 	background: url(../images/arrow-list.jpg) no-repeat left top;
-	padding-left: 15px;
-	padding-bottom: 15px
+	padding-left: 15px !important;
+	padding-bottom: 15px !important;
+	margin:0px 0px 0px 0px !important;
 }
 .list-area li a {
 	color: #000;
@@ -451,6 +526,31 @@ form {
 	font-family: "Segoe UI";
 	color: #5A5A5A
 }
+
+
+
+.list-area div {
+	list-style: none;
+	padding: 0px;
+	margin: 0px auto
+}
+.list-area div span {
+	display: block;
+	text-align: left;
+	background: url(../images/arrow-list.jpg) no-repeat left top;
+	padding-left: 15px !important;
+	padding-bottom: 15px !important;
+	margin:0px 0px 0px 0px !important;
+}
+.list-area div span a {
+	color: #000;
+	font-size: 14px;
+	font-family: "Segoe UI";
+	color: #5A5A5A
+}
+
+
+
 .b-detail-box {
 	float: left;
 	margin: 20px 0px 0px 0px;
@@ -579,3 +679,6 @@ width: 100%;
 float: left;
 margin-right: 15px;
 margin-bottom: 25px;}
+
+
+#block-blog-recent .more-link{ display:none}

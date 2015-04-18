@@ -27,6 +27,19 @@ function creativetouch_preprocess_html(&$variables) {
   if (!empty($variables['page']['home_services_area'])){
     $variables['classes_array'][] = 'home_services_area';
   }
+  
+  if (!empty($variables['page']['recent_posts'])){
+    $variables['classes_array'][] = 'recent_posts';
+  }
+  
+  if (!empty($variables['page']['blog_archive'])){
+    $variables['classes_array'][] = 'blog_archive';
+  }
+  if (!empty($variables['page']['blog_category'])){
+    $variables['classes_array'][] = 'blog_category';
+  }
+  
+  
    
   if (!empty($variables['page']['footer_firstcolumn'])){
     $variables['classes_array'][] = 'footer_firstcolumn';

@@ -118,82 +118,27 @@ if (drupal_is_front_page()) { ?>
                                   ),
                                 )); ?>
             <?php endif; ?>
-           
-            <!--<?php if ($secondary_menu): ?>
-        <div id="secondary-menu" class="navigation"> <?php print theme('links__system_secondary_menu', array(
-          'links' => $secondary_menu,
-          'attributes' => array(
-            'id' => 'secondary-menu-links',
-            'class' => array('links', 'inline', 'clearfix'),
-          ),
-          'heading' => array(
-            'text' => t('Secondary menu'),
-            'level' => 'h2',
-            'class' => array('element-invisible'),
-          ),
-        )); ?> </div>
-        <!-- /#secondary-menu -->
-            <?php endif; ?>
-            
-          <!--<ul>
-            <li><a href="#">About </a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">GALLery</a></li>
-            <li><a href="#">FAQ </a></li>
-            <li><a href="#">Contact us</a></li>
-          </ul>-->
         </div>
       </div>
     </div>
   </div>
 </header>
-
-
 <!-- /.section, /#header -->
-
 <?php if ($messages): ?>
 <div id="messages">
   <div class="section clearfix"> <?php //print $messages; ?> </div>
 </div>
 <!-- /.section, /#messages -->
 <?php endif; ?>
-
-<div class="banner"> 
-<div class="slider-container" id="slider-container">
-	<div class="slider">
-		<!--<div>
-			<img src="<?php echo base_path().path_to_theme();?>/images/banner.jpg" alt="">
-			<div style="position: absolute; width: 970px; height:130px; top: 110px; left: 300px; padding: 0px;
-                    text-align: left; line-height: 36px; font-family:Tahoma; font-weight:bold; font-size: 33px;
-                        color: #FFFFFF;">
-                        Richer Recruitment Services hopes that the workers<br /> 
-                        or helpers we bring in may help out and bring a smile<br />
-                        to your esteem company, family and children.
-                </div>
-		</div>-->
-		
-		<!--<div>
-			<img src="<?php echo base_path().path_to_theme();?>/images/banner.jpg" alt="">
-			<div style="position: absolute; width: 970px; height:130px; top: 110px; left: 300px; padding: 0px;
-                    text-align: left; line-height: 36px; font-family:Tahoma; font-weight:bold; font-size: 33px;
-                        color: #FFFFFF;">
-                        Richer Recruitment Services hopes that the workers<br /> 
-                        or helpers we bring in may help out and bring a smile<br />
-                        to your esteem company, family and children.
-            </div>-->
-		</div>
-	</div>
-</div>
-	<!--<div class="switch" id="prev"><span></span></div>
-	<div class="switch" id="next"><span></span></div>-->
- </div>
-
-<!---->
  <?php
-	if (drupal_is_front_page()) { ?>
-  <?php if ($page['home_slider']): print render($page['home_slider']); endif; ?>
-  
-<div class="below-banner">
+if (drupal_is_front_page()) { 
+	if ($page['home_slider']):?>
+    <div class="banner"> 
+  <?php  print render($page['home_slider']); ?>
+  </div>
+  <?php  endif; ?>
+  <div class="clear"></div>
+  <div class="below-banner">
   <div class="below-content">
   
   	<?php if ($page['home_page_top']){ 
@@ -201,10 +146,7 @@ if (drupal_is_front_page()) { ?>
 	}?>
     </div>
   </div>
-</div>
-<?php } ?>
-
-<!---->
+  <?php } ?>
 <?php
 if (!drupal_is_front_page()) { 
 	$mystyle = 'style="background:none"';
@@ -212,7 +154,6 @@ if (!drupal_is_front_page()) {
 	$mystyle = '';
 }
 ?>
-    
 <div class="content-area" <?php echo $mystyle; ?>>
     <div class="Main-content">
     <?php if ($tabs): ?>
@@ -229,7 +170,8 @@ if (!drupal_is_front_page()) {
   
   <?php 
   if (!drupal_is_front_page()) { 
-  if ($page): ?>
+  if ($page): 
+  ?>
       <div<?php print $title_attributes; ?> class="page-title"><?php print $title; ?></div>
   <?php endif; 
   }
@@ -239,18 +181,16 @@ if (!drupal_is_front_page()) {
   
      <?php print render($page['content']); ?>
      
-     <div class="services-area">
-     	
-        	<?php if ($page['home_services_area']){ 
-			print render($page['home_services_area']);
-	}?>
-        
-     </div>
+     <?php if ($page['home_services_area']){ ?>
+  <div class="services-area test">
+  <?php print render($page['home_services_area']);?>
+  </div>
+  <?php }?>
+  
     </div>
 </div>
 <!-- /#page, /#page-wrapper -->
 <div class="clear"></div>
-
 <footer>
   <div class="footer-top-black"></div>
   <div class="footer-bottom"></div>

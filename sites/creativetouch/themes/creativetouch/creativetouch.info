@@ -24,6 +24,11 @@ regions[home_services_area] = Home Services Area
 regions[sidebar_first] = Sidebar first
 regions[sidebar_second] = Sidebar second
 
+regions[recent_posts] = Recent Posts
+regions[blog_category] = Blog Category
+regions[blog_archive] = Blog Archive
+
+
 regions[footer_firstcolumn] = Footer first column
 regions[footer_secondcolumn] = Footer second column
 regions[footer_thirdcolumn] = Footer third column
