@@ -12,6 +12,7 @@ function creativetouch_preprocess_html(&$variables) {
 	drupal_add_js('http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.js', $options);
 	drupal_add_js(drupal_get_path('theme', 'creativetouch'). '/js/jquery-migrate-1.2.1.js', $options);
 	
+	drupal_add_css(path_to_theme() . '/css/responsive.css', array('group' => CSS_THEME, 'preprocess' => FALSE));
 
   if (!empty($variables['page']['top_search'])){
     $variables['classes_array'][] = 'top_search';

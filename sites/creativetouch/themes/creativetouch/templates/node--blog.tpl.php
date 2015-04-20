@@ -80,7 +80,7 @@
 ?>
 
 <div id="node-<?php print $node->nid; ?>" class="<?php print $node->type; ?> <?php print $classes; ?> clearfix"<?php print $attributes; ?>>
-  <div class="content clearfix"<?php print $content_attributes; ?>>
+  <div class="inner-area-left clearfix"<?php print $content_attributes; ?>>
     <?php
       // We hide the comments and links now so that we can render them later.
       //hide($content['comments']);
@@ -111,25 +111,24 @@
 				
 ?>
     <div class="page-detail">
-          <div class="blog-box-des">
-            <div class="b-title"><a href="<?php echo $GLOBALS['base_url'].'/'.$alias;?>"><?php print $node->title; ?></a></div>
-            <div class="b-date"><?php echo date('F j, Y',$node->created);?></div>
-            <div class="b-detail-box">
-            	<div class="b-img-detail"><img src="<?php echo $imageSrc; ?>" /></div>
-                <div class="detail-blog">
-                	<p><?php echo substr(stripslashes($Description), 0, 356);?></p>
-                </div>
-            </div>
-          </div>
-          <div class="share-area">
-          		<div class="share-box">
-                	<div class="share-title">Share this Article</div>
-                    <div class="share-icon"><img src="<?php echo base_path().path_to_theme()?>/images/share-icon.jpg" /></div>
-                </div>
+      <div class="blog-box-des">
+        <div class="b-title"><?php print $node->title; ?></div>
+        <div class="b-date"><?php echo date('F j, Y',$node->created);?></div>
+        <div class="b-detail-box">
+          <div class="b-img-detail"><img src="<?php echo $imageSrc; ?>" /></div>
+          <div class="detail-blog">
+            <p><?php echo substr(stripslashes($Description), 0, 356);?></p>
           </div>
         </div>
+      </div>
+      <div class="share-area">
+        <div class="share-box">
+          <div class="share-title">Share this Article</div>
+          <div class="share-icon"><img src="<?php echo base_path().path_to_theme()?>/images/share-icon.jpg" /></div>
+        </div>
+      </div>
+    </div>
   </div>
-
   <?php
     // Remove the "Add new comment" link on the teaser page or if the comment
     // form is being displayed on the same page.
@@ -140,11 +139,9 @@
     $links = render($content['links']);
     if ($links):
   ?>
-    <div class="readMore">
-      <?php //print $links; ?>
-    </div>
+  <div class="readMore">
+    <?php //print $links; ?>
+  </div>
   <?php endif; ?>
-
   <?php print render($content['comments']); ?>
-
 </div>

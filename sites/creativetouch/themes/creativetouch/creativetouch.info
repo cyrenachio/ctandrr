@@ -6,8 +6,7 @@ core = 7.x
 
 
 stylesheets[all][] = css/style.css
-stylesheets[all][] = css/slider.css
-;stylesheets[all][] = css/tabs.css
+stylesheets[all][] = css/tabs.css
 stylesheets[print][] = css/pagination.css
 stylesheets[print][] = css/print.css
 

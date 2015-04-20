@@ -156,21 +156,22 @@ $images = '';
   <div class="Main-content">
     <div class="inner-area">
       <div class="page-title">GALLERY</div>
-      <div class="page-detail-full">
-        <div class="gallery-area">
-          <ul id="tabs">
-            <li class="active">ALL</li>
-            <?php
-			foreach($categoryGArr as $cat){
-				echo '<li>'.$cat->name.'</li>';
-			}
-			?>
-          </ul>
-          <ul id="tab">
-            <li class="active">
-              <div class="gallery-main">
-                <?php
+      <div class="gallery-area">
+      <ul id="tabs">
+        <li class="active">All</li>
+        <?php
         foreach($categoryGArr as $cat){
+			echo '<li>'.$cat->name.'</li>';
+		}
+        ?>
+      </ul>
+      <ul id="tab">
+        <li class="active">
+        <div class="gallery-main">
+          <?php
+        foreach($categoryGArr as $cat){
+			?>
+          <?php
              $GalleryArr = taxonomy_select_nodes($tid = $cat->tid, $pager = TRUE, $limit = 10, $order = array('t.sticky' => 'DESC', 't.created' => 'DESC'));
 			 foreach($GalleryArr as $key=>$image){
 			 $images = node_load($nid = $image, $vid = NULL, $reset = FALSE);
@@ -191,24 +192,23 @@ $images = '';
 				 $imageSrc = base_path().path_to_theme().'/images/default.jpg';
 				}
 				?>
-                <div class="gallery-box">
-                  
-                    <div class="img"><a href="<?php echo $P_URL;?>" target="_blank" title="<?php echo $images->title;?>"><img src="<?php echo $imageSrc;?>" /></a></div>
-                    <div class="product-title"><?php echo $images->title;?></div>
-                </div>
-              </div>
-              <?php
+          <div class="gallery-box">
+            <div class="img"> <a href="<?php echo $P_URL;?>" target="_blank" title="<?php echo $images->title;?>"><img title="<?php echo $images->title;?>" src="<?php echo $imageSrc;?>" /></a> </div>
+            <div class="product-title"> <a href="<?php echo $P_URL;?>" target="_blank" title="<?php echo $images->title;?>"><?php echo $images->title;?></a> </div>
+          </div>
+          <?php
 			 }
 		}
 			?>
-            </li>
-            <?php
+            </div>
+        </li>
+        <?php
         foreach($categoryGArr as $cat){
 			?>
-            <li>
-              <?php
+        <li>
+        <div class="gallery-main">
+          <?php
              $GalleryArr = taxonomy_select_nodes($tid = $cat->tid, $pager = TRUE, $limit = 10, $order = array('t.sticky' => 'DESC', 't.created' => 'DESC'));
-			 if(count($GalleryArr)>0){
 			 foreach($GalleryArr as $key=>$image){
 			 $images = node_load($nid = NULL, $vid = $image, $reset = FALSE);
 
@@ -228,40 +228,21 @@ $images = '';
 				 $imageSrc = base_path().path_to_theme().'/images/default.jpg';
 				}
 				?>
-              <div class="gallery-main">
-                <div class="gallery-box">
-                    <div class="img"><a href="<?php echo $P_URL;?>" target="_blank" title="<?php echo $images->title;?>"><img src="<?php echo $imageSrc;?>" /></a></div>
-                    <div class="product-title"><?php echo $images->title;?></div>
-                </div>
-              </div>
-              <?php
-			 }
-			 }else
-			 {
-				 echo 'No gallery item to display. ';
+          <div class="gallery-box">
+            <div class="img"> <a href="<?php echo $P_URL;?>"><img src="<?php echo $imageSrc;?>" /></a> </div>
+            <div class="product-title"> <a href="<?php echo $P_URL;?>"><?php echo $images->title;?></a> </div>
+          </div>
+          <?php
 			 }
 			?>
-            </li>
-            <?php
+            </div>
+        </li>
+        <?php
 		}
         ?>
-          </ul>
-        </div>
-        <div class="clear"></div>
-        <!--<div class="page_nation">
-          <ul class="tsc_pagination tsc_paginationA tsc_paginationA01">
-            <li><a href="#" class="first" style="background:none; border:none; padding:0px"><img src="images/first.jpg" /></a></li>
-            <li><a href="#" class="previous" style="background:none; border:none;padding:0px"><img src="images/previous.jpg" /></a></li>
-            <li><a href="#">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#" class="current">3</a></li>
-            <li><a href="#">4</a></li>
-            <li><a href="#">5</a></li>
-            <li><a href="#" class="next" style="background:none; border:none;padding:0px"><img src="images/next.jpg" /></a></li>
-            <li><a href="#" class="last" style="background:none; border:none;padding:0px"><img src="images/last.jpg" /></a></li>
-          </ul>
-        </div>-->
-      </div>
+      </ul>
+      <!--<div class="pagination clearfix"> <a href="#" style="padding:2px; margin:0px; border:0;"><img style="vertical-align:middle;" src="images/right-arrow-page.jpg" /></a> <a href="#" style="padding:0px; margin:0px; border:0;"><img style="vertical-align:middle;" src="images/right-arrow-page_2.jpg" /></a>&nbsp; <strong>1</strong> <a href="#">2</a> <a href="#">3</a> <a href="#">4</a> <a href="#">5</a>&nbsp; <a href="#" style="padding:2px; margin:0px; border:0; "><img style="vertical-align:middle;" src="images/left-arrow-page_2.jpg" /></a> <a href="#" style="padding:0px; margin:0px; border:0;"><img style="vertical-align:middle;" src="images/left-arrow-page.jpg" /></a> </div>-->
+    </div>
     </div>
   </div>
 </div>

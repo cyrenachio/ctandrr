@@ -170,12 +170,9 @@ if (!drupal_is_front_page()) {
   
   <?php 
   if (!drupal_is_front_page()) { 
-  if ($page): 
-  ?>
+  if ($page): ?>
       <div<?php print $title_attributes; ?> class="page-title"><?php print $title; ?></div>
-  <?php endif; 
-  }
-  ?>
+  <?php endif; } ?>
   
   <?php print render($title_suffix); ?>
   

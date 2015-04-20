@@ -180,10 +180,8 @@ if (!drupal_is_front_page()) {
       <?php endif; 
   }
   ?>
-      <?php print render($title_suffix); ?> 
-	  <div class="page-detail">
-	  <?php print render($page['content']); ?>
-      </div>
+      <?php print render($title_suffix); ?>
+      <div class="page-detail"> <?php print render($page['content']); ?> </div>
       <?php if ($page['home_services_area']){ ?>
       <div class="services-area test"> <?php print render($page['home_services_area']);?> </div>
       <?php }?>
@@ -194,27 +192,21 @@ if (!drupal_is_front_page()) {
     <?php if ($page['recent_posts']){ ?>
     <div class="listing-area">
       <div class="list-title">Recent Posts</div>
-      <div class="list-area">
-      <?php print render($page['recent_posts']); ?>
-      </div>
+      <div class="list-area"> <?php print render($page['recent_posts']); ?> </div>
     </div>
     <?php } ?>
-     <?php if ($page['blog_category']){ ?>
+    <?php if ($page['blog_category']){ ?>
     <div class="listing-area">
       <div class="list-title">Category</div>
-      <div class="list-area">
-      <?php print render($page['blog_category']); ?>
-      </div>
+      <div class="list-area"> <?php print render($page['blog_category']); ?> </div>
     </div>
     <?php } ?>
     <?php if ($page['blog_archive']){ ?>
     <div class="listing-area">
       <div class="list-title">Archives</div>
-      <div class="list-area">
-      <?php print render($page['blog_archive']); ?>
-      </div>
+      <div class="list-area"> <?php print render($page['blog_archive']); ?> </div>
     </div>
-     <?php } ?>
+    <?php } ?>
   </div>
 </div>
 <!-- /#page, /#page-wrapper -->

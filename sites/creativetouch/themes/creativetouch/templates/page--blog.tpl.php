@@ -174,20 +174,12 @@ if (!drupal_is_front_page()) {
       </ul>
       <?php endif; ?>
       <?php print render($title_prefix); ?>
-      <!--<?php 
-	  if (!drupal_is_front_page()) { 
-	  if ($page):
-	  ?>
-		  <div<?php print $title_attributes; ?> class="page-title"><?php print $title; ?></div>
-	  <?php 
-	  endif; 
-	  }
-	  ?>-->
+      <?php if (!$page): ?>
+      <div<?php print $title_attributes; ?> class="page-title"><?php print $title; ?></div>
+      <?php endif; ?>
       <div<?php print $title_attributes; ?> class="page-title">Blog</div>
-      <?php print render($title_suffix); ?> 
-	  <div class="page-detail">
-	  <?php print render($page['content']); ?>
-      </div>
+      <?php print render($title_suffix); ?>
+      <div class="page-detail"> <?php print render($page['content']); ?> </div>
       <?php if ($page['home_services_area']){ ?>
       <div class="services-area test"> <?php print render($page['home_services_area']);?> </div>
       <?php }?>
@@ -195,30 +187,24 @@ if (!drupal_is_front_page()) {
   </div>
   <div class="sidebar-top"></div>
   <div class="sidebar">
-    <?php if ($page['recent_posts']){ ?>
+    <?php if (block_get_blocks_by_region('recent_posts')){ ?>
     <div class="listing-area">
       <div class="list-title">Recent Posts</div>
-      <div class="list-area">
-      <?php print render($page['recent_posts']); ?>
-      </div>
+      <div class="list-area"> <?php print render(block_get_blocks_by_region('recent_posts'));?> </div>
     </div>
     <?php } ?>
-     <?php if ($page['blog_category']){ ?>
+    <?php if (block_get_blocks_by_region('blog_category')){ ?>
     <div class="listing-area">
       <div class="list-title">Category</div>
-      <div class="list-area">
-      <?php print render($page['blog_category']); ?>
-      </div>
+      <div class="list-area"> <?php print render(block_get_blocks_by_region('blog_category')); ?> </div>
     </div>
     <?php } ?>
-    <?php if ($page['blog_archive']){ ?>
+    <?php if (block_get_blocks_by_region('blog_archive')){ ?>
     <div class="listing-area">
       <div class="list-title">Archives</div>
-      <div class="list-area">
-      <?php print render($page['blog_archive']); ?>
-      </div>
+      <div class="list-area"> <?php print render(block_get_blocks_by_region('blog_archive')); ?> </div>
     </div>
-     <?php } ?>
+    <?php } ?>
   </div>
 </div>
 <!-- /#page, /#page-wrapper -->
