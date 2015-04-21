@@ -91,16 +91,32 @@ $images = '';
 
 <header>
   <div class="header">
-    <div class="header-wrap">
-      <div class="logo">
-        <?php if ($logo): ?>
-        <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo"> <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" /> </a>
+  <div class="header-wrap">
+    <div class="logo">
+      <?php if ($logo): ?>
+      <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo"> <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" /> </a>
+      <?php endif; ?>
+    </div>
+    <div class="mobile-menu"> <a class="toggleMenu" href="#">&#9776;</a>
+       <?php if ($main_menu): ?>
+        <?php print theme('links__system_main_menu', array(
+			  'links' => $main_menu,
+			  'attributes' => array(
+				'id' => 'main-mobile-links',
+				'class' => array('nav', 'clearfix'),
+			  ),
+			  'heading' => array(
+				'text' => t('Main menu'),
+				'level' => 'h2',
+				'class' => array('element-invisible'),
+			  ),
+			)); ?>
         <?php endif; ?>
-      </div>
-      <div class="nav-area">
-        <div class="nav">
-          <?php if ($main_menu): ?>
-          <?php print theme('links__system_main_menu', array(
+    </div>
+    <div class="nav-area">
+      <div class="nav-desk">
+        <?php if ($main_menu): ?>
+        <?php print theme('links__system_main_menu', array(
                                   'links' => $main_menu,
                                   'attributes' => array(
                                     'id' => 'main-menu-links',
@@ -112,35 +128,11 @@ $images = '';
                                     'class' => array('element-invisible'),
                                   ),
                                 )); ?>
-          <?php endif; ?>
-          
-          <!--<?php if ($secondary_menu): ?>
-        <div id="secondary-menu" class="navigation"> <?php print theme('links__system_secondary_menu', array(
-          'links' => $secondary_menu,
-          'attributes' => array(
-            'id' => 'secondary-menu-links',
-            'class' => array('links', 'inline', 'clearfix'),
-          ),
-          'heading' => array(
-            'text' => t('Secondary menu'),
-            'level' => 'h2',
-            'class' => array('element-invisible'),
-          ),
-        )); ?> </div>
-        <!-- /#secondary-menu -->
-          <?php endif; ?>
-          
-          <!--<ul>
-            <li><a href="#">About </a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">GALLery</a></li>
-            <li><a href="#">FAQ </a></li>
-            <li><a href="#">Contact us</a></li>
-          </ul>--> 
-        </div>
+        <?php endif; ?>
       </div>
     </div>
   </div>
+</div>
 </header>
 <?php if ($messages): ?>
 <div id="messages">
@@ -272,3 +264,4 @@ $(document).ready(function(){
     </div>
   </div>
 </footer>
+<script type="text/javascript" src="<?php echo base_path().path_to_theme();?>/js/script.js"></script>

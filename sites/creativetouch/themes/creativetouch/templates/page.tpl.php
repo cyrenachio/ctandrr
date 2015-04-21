@@ -91,21 +91,42 @@ $path_alias = drupal_lookup_path('alias',$path);
 <?php
 if (drupal_is_front_page()) { ?>
 <style type="text/css">
-.region-content{ width:955px; margin-bottom:0px; float:left; margin-top:0px;}
+.region-content {
+	width:955px;
+	margin-bottom:0px;
+	float:left;
+	margin-top:0px;
+}
 </style>
 <?php }?>
-
 <header>
-  <div class="header">
-    <div class="header-wrap">
-      <div class="logo"> <?php if ($logo): ?>
-          <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo"> <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" /> </a>
-          <?php endif; ?></div>
-      <div class="nav-area">
-        <div class="nav">
-        
-        	<?php if ($main_menu): ?>
-            <?php print theme('links__system_main_menu', array(
+<div class="header">
+  <div class="header-wrap">
+    <div class="logo">
+      <?php if ($logo): ?>
+      <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo"> <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" /> </a>
+      <?php endif; ?>
+    </div>
+    <div class="mobile-menu"> <a class="toggleMenu" href="#">&#9776;</a>
+       <?php if ($main_menu): ?>
+        <?php print theme('links__system_main_menu', array(
+			  'links' => $main_menu,
+			  'attributes' => array(
+				'id' => 'main-mobile-links',
+				'class' => array('nav', 'clearfix'),
+			  ),
+			  'heading' => array(
+				'text' => t('Main menu'),
+				'level' => 'h2',
+				'class' => array('element-invisible'),
+			  ),
+			)); ?>
+        <?php endif; ?>
+    </div>
+    <div class="nav-area">
+      <div class="nav-desk">
+        <?php if ($main_menu): ?>
+        <?php print theme('links__system_main_menu', array(
                                   'links' => $main_menu,
                                   'attributes' => array(
                                     'id' => 'main-menu-links',
@@ -117,36 +138,37 @@ if (drupal_is_front_page()) { ?>
                                     'class' => array('element-invisible'),
                                   ),
                                 )); ?>
-            <?php endif; ?>
-        </div>
+        <?php endif; ?>
       </div>
     </div>
   </div>
+</div>
 </header>
 <!-- /.section, /#header -->
 <?php if ($messages): ?>
 <div id="messages">
-  <div class="section clearfix"> <?php //print $messages; ?> </div>
+  <div class="section clearfix">
+    <?php //print $messages; ?>
+  </div>
 </div>
 <!-- /.section, /#messages -->
 <?php endif; ?>
- <?php
+<?php
 if (drupal_is_front_page()) { 
 	if ($page['home_slider']):?>
-    <div class="banner"> 
+<div class="banner">
   <?php  print render($page['home_slider']); ?>
-  </div>
-  <?php  endif; ?>
-  <div class="clear"></div>
-  <div class="below-banner">
+</div>
+<?php  endif; ?>
+<div class="clear"></div>
+<div class="below-banner">
   <div class="below-content">
-  
-  	<?php if ($page['home_page_top']){ 
+    <?php if ($page['home_page_top']){ 
 			print render($page['home_page_top']);
 	}?>
-    </div>
   </div>
-  <?php } ?>
+</div>
+<?php } ?>
 <?php
 if (!drupal_is_front_page()) { 
 	$mystyle = 'style="background:none"';
@@ -155,36 +177,27 @@ if (!drupal_is_front_page()) {
 }
 ?>
 <div class="content-area" <?php echo $mystyle; ?>>
-    <div class="Main-content">
+  <div class="Main-content">
     <?php if ($tabs): ?>
-      <div class="tabs"> <?php print render($tabs); ?> </div>
-      <?php endif; ?>
-      <?php print render($page['help']); ?>
-      <?php if ($action_links): ?>
-      <ul class="action-links">
-        <?php print render($action_links); ?>
-      </ul>
-      <?php endif; ?>
-      
-      <?php print render($title_prefix); ?>
-  
-  <?php 
+    <div class="tabs"> <?php print render($tabs); ?> </div>
+    <?php endif; ?>
+    <?php print render($page['help']); ?>
+    <?php if ($action_links): ?>
+    <ul class="action-links">
+      <?php print render($action_links); ?>
+    </ul>
+    <?php endif; ?>
+    <?php print render($title_prefix); ?>
+    <?php 
   if (!drupal_is_front_page()) { 
   if ($page): ?>
-      <div<?php print $title_attributes; ?> class="page-title"><?php print $title; ?></div>
-  <?php endif; } ?>
-  
-  <?php print render($title_suffix); ?>
-  
-     <?php print render($page['content']); ?>
-     
-     <?php if ($page['home_services_area']){ ?>
-  <div class="services-area test">
-  <?php print render($page['home_services_area']);?>
+    <div<?php print $title_attributes; ?> class="page-title"><?php print $title; ?></div>
+    <?php endif; } ?>
+    <?php print render($title_suffix); ?> <?php print render($page['content']); ?>
+    <?php if ($page['home_services_area']){ ?>
+    <div class="services-area test"> <?php print render($page['home_services_area']);?> </div>
+    <?php }?>
   </div>
-  <?php }?>
-  
-    </div>
 </div>
 <!-- /#page, /#page-wrapper -->
 <div class="clear"></div>
@@ -192,8 +205,12 @@ if (!drupal_is_front_page()) {
   <div class="footer-top-black"></div>
   <div class="footer-bottom"></div>
   <div class="footer-wrap">
-    <div class="copy-area"><?php if ($page['footer_copyright']): print render($page['footer_copyright']); endif; ?></div>
-    <div class="designed"> <?php if ($page['developed_by']): print render($page['developed_by']); endif; ?></div>
+    <div class="copy-area">
+      <?php if ($page['footer_copyright']): print render($page['footer_copyright']); endif; ?>
+    </div>
+    <div class="designed">
+      <?php if ($page['developed_by']): print render($page['developed_by']); endif; ?>
+    </div>
   </div>
 </footer>
-
+<script type="text/javascript" src="<?php echo base_path().path_to_theme();?>/js/script.js"></script> 

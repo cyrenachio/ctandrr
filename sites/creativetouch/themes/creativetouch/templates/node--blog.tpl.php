@@ -117,14 +117,32 @@
         <div class="b-detail-box">
           <div class="b-img-detail"><img src="<?php echo $imageSrc; ?>" /></div>
           <div class="detail-blog">
-            <p><?php echo substr(stripslashes($Description), 0, 356);?></p>
+            <p><?php echo substr(stripslashes($Description), 0, 356);?>
+            <?php
+			// Only display the wrapper div if there are links.
+			$links = render($content['links']);
+			if ($links):
+			?>
+			<a class="readMore" href="<?php print $node_url; ?>">Read More →</a>
+			<!--<div class="readMore"><?php //print $links; ?> </div>-->
+			<?php endif; ?>
+            </p>
           </div>
         </div>
       </div>
       <div class="share-area">
         <div class="share-box">
           <div class="share-title">Share this Article</div>
-          <div class="share-icon"><img src="<?php echo base_path().path_to_theme()?>/images/share-icon.jpg" /></div>
+          <div class="share-icon">
+           <?php 
+		   if (block_get_blocks_by_region('share_this')){ 
+		   
+		   print render(block_get_blocks_by_region('share_this')); } 
+		   
+		   ?>
+          <!--<img src="<?php echo base_path().path_to_theme()?>/images/share-icon.jpg" />-->
+          
+          </div>
         </div>
       </div>
     </div>

@@ -1,0 +1,164 @@
+@media all and (max-width:320px)and (min-width:241px){
+
+	.wrapper-m{ width:98%; overflow:hidden ; margin:0px auto}
+
+	.footer-nav-wrap{ margin:0px; ; width:98%}
+	.copy-right{ width:100%}
+	.footer-menu{ width:100%}
+	.development-ref{ width:100%}
+	.footer-nav{ float:left; min-height:40px !important;}
+	.footer-wrap{ height:auto !important}
+	.footer-wrap-inner{ width:100%}
+.services .block-block {   margin:0px auto !important; float:none !important; height:auto}
+.services{ width:100%; margin:0px auto; height:auto !important}
+.header-wrap{ margin:0px auto ; width:100%}
+.header-inner{ margin:0px auto; width:100%}
+.menu-area{ width:100%}
+	.container-wrap{ margin:0px auto; width:95%}
+	.content-area{ margin:0px auto; width:100%}
+	#node-28{ float:left ; width:100%}
+	.field-textarea textarea{ width:98%}
+	.content-area-wrap{ width:100%}
+	.pf-services{ float:none !important; margin:0px auto !important}
+	.content-area-pf ul#tabs li{ margin-bottom:5px}
+	.content-area-pf ul#tabs{ margin-left:5px;}
+	.webform-client-form .field{ width:98%}
+	.c-text{ width:100%}
+	.theme-default .nivoSlider img{ height:auto !important}
+	}
+
+@media all and (max-width:360px)and (min-width:321px){
+
+	.wrapper-m{ width:98%; overflow:hidden ; margin:0px auto}
+	
+	.footer-nav-wrap{ margin:0px; ; width:98%}
+	.copy-right{ width:100%}
+	.footer-menu{ width:100%}
+	.development-ref{ width:100%}
+	.footer-nav{ float:left; min-height:40px !important;}
+	.footer-wrap{ height:auto !important}
+	.footer-wrap-inner{ width:100%}
+	.services .block-block {   margin:0px auto !important; float:none !important; height:auto !important}
+.services{ width:100%; margin:0px auto;height:auto !important}
+.header-wrap{ margin:0px auto ; width:100%}
+.header-inner{ margin:0px auto; width:100%}
+.menu-area{ width:100%}
+
+.container-wrap{ margin:0px auto; width:95%}
+	.content-area{ margin:0px auto; width:100%}
+	#node-28{ float:left ; width:100%}
+	.field-textarea textarea{ width:98%}
+	.content-area-wrap{ width:100%}
+	.pf-services{ float:none !important; margin:0px auto !important}
+	.content-area-pf ul#tabs li{ margin-bottom:5px}
+	.content-area-pf ul#tabs{ margin-left:5px;}
+	.webform-client-form .field{ width:98%}
+	.c-text{ width:100%}
+	.theme-default .nivoSlider img{ height:auto !important}
+	
+	}
+
+@media all and (max-width:480px)and (min-width:361px){
+
+	.wrapper-m{ width:98%; overflow:hidden ; margin:0px auto}
+
+	.footer-nav-wrap{ margin:0px; ; width:98%}
+	.copy-right{ width:100%}
+	.footer-menu{ width:100%}
+	.development-ref{ width:100%}
+	.footer-nav{ float:left; min-height:40px !important;}
+	.footer-wrap{ height:auto !important}
+	.footer-wrap-inner{ width:100%}
+	.services .block-block {   margin:0px auto !important; float:none !important; height:auto !important}
+.services{ width:100%; margin:0px auto;height:auto !important}
+.header-wrap{ margin:0px auto ; width:100%}
+.header-inner{ margin:0px auto; width:100%}
+.menu-area{ width:100%}
+
+.container-wrap{ margin:0px auto; width:95%}
+	.content-area{ margin:0px auto; width:100%}
+	#node-28{ float:left ; width:100%}
+	.field-textarea textarea{ width:98%}
+	.content-area-wrap{ width:100%}
+	.pf-services{ float:none !important; margin:0px auto !important}
+	.content-area-pf ul#tabs li{ margin-bottom:5px}
+	.content-area-pf ul#tabs{ margin-left:5px;}
+	.webform-client-form .field{ width:98%}
+	.c-text{ width:100%}
+	.theme-default .nivoSlider img{ height:auto !important}
+	
+	}
+
+@media all and (max-width:639px)and (min-width:481px){
+
+	.wrapper-m{ width:98%; overflow:hidden ; margin:0px auto}
+	.block-block {  float:none !important; height:auto !important; width:29%}
+
+	.container-wrap{ margin:0px auto; width:95%}
+	.content-area{ margin:0px auto; width:100%}
+	#node-28{ float:left ; width:100%}
+	.field-textarea textarea{ width:98%}
+	.content-area-pf ul#tabs{ margin-left:5px;}
+	.theme-default .nivoSlider img{ height:auto !important}
+	}
+
+@media all and (max-width:768px)and (min-width:640px){
+
+	.wrapper-m{ width:98%; overflow:hidden ; margin:0px auto}
+	.footer-nav-wrap{ margin:0px; ; width:98%}
+	.copy-right{ width:100%}
+	.footer-menu{ width:100%}
+	.development-ref{ width:100%}
+	.footer-nav{ float:left; min-height:40px !important;}
+	.footer-wrap{ height:auto !important}
+	.footer-wrap-inner{ width:100%}
+	.services{ width:100%}
+.services-wrap .block-block {   height:auto !important; width:29% !important}
+	.service-img{ width:100%}
+	.service-img img{ width:100%}
+	
+.container-wrap{ margin:0px auto; width:95%}
+	.content-area{ margin:0px auto; width:100%}
+	#node-28{ float:left ; width:100%}
+	.field-textarea textarea{ width:98%}
+	.content-area-wrap{ width:100%}
+	.pf-services{margin-left:5px; width:30%}
+	.content-area-pf ul#tabs li{ margin-bottom:5px}
+	.pf-imgs{ width:100%}
+	.pf-imgs img{ width:100%}
+	.content-area-pf ul#tabs{ margin-left:5px;}
+	.webform-client-form .field{ width:98%}
+	.c-text{ width:100%}
+	.theme-default .nivoSlider img{ height:auto !important}
+	.menu-area{ width:auto}
+	.menu-area nav ul li a{ font-size:13px;}
+	.header-wrap{ width:100%}
+	.header-inner{ width:100%}
+	
+	}
+
+@media all and (max-width:800px)and (min-width:769px){
+
+	.wrapper-m{ width:98%; overflow:hidden ; margin:0px auto}
+	.services-wrap .block-block {   height:auto !important; width:29% !important}
+	.service-img{ width:100%}
+	.service-img img{ width:100%}
+	.services{ width:100%}
+
+	
+	}
+
+@media all and (max-width:980px)and (min-width:800px){
+
+	.wrapper-m{ width:98%; overflow:hidden ; margin:0px auto}
+
+	
+	}
+
+@media all and (max-width:1280px)and (min-width:980px){
+
+	.footer-wrap{ width:98%}
+
+	
+
+	}

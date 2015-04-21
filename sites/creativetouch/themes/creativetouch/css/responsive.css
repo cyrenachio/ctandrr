@@ -10,6 +10,13 @@
 	#node-13{ width:98%; margin:0px auto; float:none}
 	.field-textarea textarea{ width:97%}
 	.gallery-box{ float:none; margin:0px auto}
+	.sidebar-top{ display:none}
+	.sidebar{ margin:0px auto; float:none}
+	.inner-area-left{ width:95%; margin:0px auto}
+	.view-blog .views-row .views-field-body{ margin:0px auto; width:95%; float:none}
+.mobile-menu{ display:block; clear:both}
+.nav-desk{ display:none}
+.theme-default .nivoSlider img{ height:auto !important}
 	
 	}
 
@@ -25,8 +32,14 @@
 	#node-13{ width:98%; margin:0px auto; float:none}
 	.field-textarea textarea{ width:97%}
 	.gallery-box{ float:none; margin:0px auto}
+	.sidebar-top{ display:none}
+	.sidebar{ margin:0px auto; float:none}
+	.inner-area-left{ width:95%; margin:0px auto}
+	.view-blog .views-row .views-field-body{ margin:0px auto; width:95%; float:none}
 
-	
+	.mobile-menu{ display:block; clear:both}
+	.nav-desk{ display:none}
+	.theme-default .nivoSlider img{ height:auto !important}
 	}
 
 @media all and (max-width:480px)and (min-width:361px){
@@ -42,7 +55,13 @@
 	#node-13{ width:98%; margin:0px auto; float:none}
 	.field-textarea textarea{ width:97%}
 	.gallery-box{ float:none; margin:0px auto}
-	
+	.sidebar-top{ display:none}
+	.sidebar{ margin:0px auto; float:none}
+	.inner-area-left{ width:95%; margin:0px auto}
+	.view-blog .views-row .views-field-body{ margin:0px auto; width:95%; float:none}
+	.mobile-menu{ display:block; clear:both}
+	.nav-desk{ display:none}
+	.theme-default .nivoSlider img{ height:auto !important}
 	}
 
 @media all and (max-width:639px)and (min-width:481px){
@@ -56,8 +75,12 @@
 	.region-content{ width:100% !important}
 	#node-13{ width:98%; margin:0px auto; float:none}
 	.field-textarea textarea{ width:97%}
+	.sidebar-top{ display:none}
+	.sidebar{ margin:0px auto; float:none}
+	.inner-area-left{ width:95%; margin:0px auto}
+	.view-blog .views-row .views-field-body{ margin:0px auto; width:95%; float:none}
 
-	
+	.theme-default .nivoSlider img{ height:auto !important}
 	}
 
 @media all and (max-width:768px)and (min-width:640px){
@@ -71,6 +94,7 @@
 	.region-content{ width:100% !important}
 	#node-13{ width:98%; margin:0px auto; float:none}
 	.field-textarea textarea{ width:97%}
+	.theme-default .nivoSlider img{ height:auto !important}
 
 	
 	}
@@ -91,8 +115,8 @@
 
 @media all and (max-width:1280px)and (min-width:980px){
 
-	.footer-wrap{ width:98%}
+	
 
-	.header-wrap{ width:98%}
+
 
 	}

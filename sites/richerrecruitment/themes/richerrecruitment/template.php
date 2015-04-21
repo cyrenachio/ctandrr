@@ -8,8 +8,9 @@ function richerrecruitment_preprocess_html(&$variables) {
 	$options = array(
     'group' => JS_THEME,
 	);
+	drupal_add_css(path_to_theme() . '/css/responsive.css', array('group' => CSS_THEME,'preprocess' => FALSE));
+	
 	drupal_add_js(drupal_get_path('theme', 'richerrecruitment'). '/js/jquery-1.11.1.min.js', $options);
-
 	drupal_add_js(drupal_get_path('theme', 'richerrecruitment'). '/js/jquery-migrate-1.2.1.js', $options);
 	
 	

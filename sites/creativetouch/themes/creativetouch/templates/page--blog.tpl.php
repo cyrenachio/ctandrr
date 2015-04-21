@@ -108,8 +108,24 @@ if (drupal_is_front_page()) { ?>
       <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo"> <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" /> </a>
       <?php endif; ?>
     </div>
+    <div class="mobile-menu"> <a class="toggleMenu" href="#">&#9776;</a>
+       <?php if ($main_menu): ?>
+        <?php print theme('links__system_main_menu', array(
+			  'links' => $main_menu,
+			  'attributes' => array(
+				'id' => 'main-mobile-links',
+				'class' => array('nav', 'clearfix'),
+			  ),
+			  'heading' => array(
+				'text' => t('Main menu'),
+				'level' => 'h2',
+				'class' => array('element-invisible'),
+			  ),
+			)); ?>
+        <?php endif; ?>
+    </div>
     <div class="nav-area">
-      <div class="nav">
+      <div class="nav-desk">
         <?php if ($main_menu): ?>
         <?php print theme('links__system_main_menu', array(
                                   'links' => $main_menu,
@@ -221,3 +237,4 @@ if (!drupal_is_front_page()) {
     </div>
   </div>
 </footer>
+<script type="text/javascript" src="<?php echo base_path().path_to_theme();?>/js/script.js"></script> 

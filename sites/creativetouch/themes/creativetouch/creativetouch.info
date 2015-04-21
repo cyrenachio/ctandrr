@@ -26,6 +26,8 @@ regions[sidebar_second] = Sidebar second
 regions[recent_posts] = Recent Posts
 regions[blog_category] = Blog Category
 regions[blog_archive] = Blog Archive
+regions[share_this] = Share This
+
 
 
 regions[footer_firstcolumn] = Footer first column

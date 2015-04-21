@@ -12,6 +12,8 @@ function creativetouch_preprocess_html(&$variables) {
 	drupal_add_js('http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.js', $options);
 	drupal_add_js(drupal_get_path('theme', 'creativetouch'). '/js/jquery-migrate-1.2.1.js', $options);
 	
+	drupal_add_css(path_to_theme() . '/css/rmenustyle.css', array('group' => CSS_THEME, 'preprocess' => FALSE));
+	
 	drupal_add_css(path_to_theme() . '/css/responsive.css', array('group' => CSS_THEME, 'preprocess' => FALSE));
 
   if (!empty($variables['page']['top_search'])){
@@ -36,12 +38,16 @@ function creativetouch_preprocess_html(&$variables) {
   if (!empty($variables['page']['blog_archive'])){
     $variables['classes_array'][] = 'blog_archive';
   }
+  
   if (!empty($variables['page']['blog_category'])){
     $variables['classes_array'][] = 'blog_category';
   }
   
+  if (!empty($variables['page']['share_this'])){
+    $variables['classes_array'][] = 'share_this';
+  }
   
-   
+  
   if (!empty($variables['page']['footer_firstcolumn'])){
     $variables['classes_array'][] = 'footer_firstcolumn';
   }
@@ -141,7 +147,7 @@ function creativetouch_process_page(&$variables) {
 /**
  * Override or insert variables into the node template.
  */
-function creativetouch_preprocess_node(&$variables) {
+function creativetouch_preprocess_node(&$variables, $hook) {
   if ($variables['view_mode'] == 'full' && node_is_page($variables['node'])) {
     $variables['classes_array'][] = 'node-full';
   }

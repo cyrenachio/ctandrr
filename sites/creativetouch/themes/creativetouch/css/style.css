@@ -69,23 +69,24 @@ form {
 .nav-area {
 	float: right
 }
-.nav {
+.nav-desk {
 	margin: 26px 0px 0px 0px;
 }
-.nav ul {
+.nav-desk ul {
 	list-style: none
 }
-.nav li {
+.nav-desk li {
 	display: inline;
 	padding: 0px 5px;
 }
-.nav li a {
+.nav-desk li a {
 	color: #000;
 	font-size: 15px;
 	text-transform: uppercase;
 	font-family: "Century Gothic";
 	color: #747474
 }
+.nav-desk li a:active,.active{ color:#38439c !important}
 /*******banner-img***********/
 .banner {
 	width: 100%
@@ -96,7 +97,7 @@ form {
 }
 .below-banner {
 	width: 100%;
-	height: 250px;
+	min-height: 250px;
 	float: left;
 	background: #2C098D
 }
@@ -193,7 +194,7 @@ form {
 	background: url(../images/body-bg.jpg) center;
 	width: 100%;
 	float: left;
-	min-height: 746px
+	min-height: 400px
 }
 .home-title {
 	font-weight: bold;
@@ -400,8 +401,9 @@ form {
 	font-size: 14px;
 	color: #4e4e4e;
 	text-transform: uppercase;
+	width: 100%;
+	clear: both;
 }
-	
 .read-more {
 	text-align: left;
 	margin: 15px 0px 0px 0px;
@@ -458,17 +460,7 @@ form {
 	font-family: "Segoe UI";
 	line-height: 22px;
 	margin-top: -5px;
-}
-.views-more-link{	
-	text-align: left;
-	margin: 15px 0px 0px 0px;
-	float: left;
-	font-family: "Century Gothic";
-	font-size: 14px;
-	color: #4e4e4e;
-	text-transform: uppercase;
-}
-	
+}	
 .read-more {
 	text-align: left;
 	margin: 15px 0px 0px 0px;
@@ -682,3 +674,5 @@ margin-bottom: 25px;}
 
 
 #block-blog-recent .more-link{ display:none}
+
+.mobile-menu{ display:none}
