@@ -365,6 +365,7 @@ form {
 .sidebar {
 	float: left;
 	width: 210px;
+	margin-top:95px;
 }
 
 /*************view-archive***************/
@@ -486,8 +487,8 @@ form {
 /*.b-img-detail img{ width:100%}*/
 .sidebar-top {
 	height: 95px;
-	width: 200px;
-	float: left;
+/*	width: 200px;
+	float: left;*/
 }
 .list-title {
 	font-family: "Century Gothic";

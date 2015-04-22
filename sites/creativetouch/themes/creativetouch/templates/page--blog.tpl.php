@@ -201,7 +201,7 @@ if (!drupal_is_front_page()) {
       <?php }?>
     </div>
   </div>
-  <div class="sidebar-top"></div>
+<!--  <div class="sidebar-top"></div>-->
   <div class="sidebar">
     <?php if (block_get_blocks_by_region('recent_posts')){ ?>
     <div class="listing-area">
