@@ -5,7 +5,7 @@
   text-align:left;
 }
 .content-area-pf ul#tabs li {	
-    display: inline;
+    display: inline-block;
     background-color: #f2f2f2;
     padding: 7px 29px;
     margin:0px 7px 0px 0px;
@@ -18,11 +18,11 @@
 }
 .content-area-pf ul#tabs li:hover {
       background-color:#FF0200;
-	  color:#fff;
+	  color:#fff !important;
 }
 .content-area-pf ul#tabs li.active {
       background-color: #FF0200; 
-	  color:#fff;
+	  color:#fff !important;
 	  
 }
 
@@ -32,7 +32,7 @@
   padding: 0;
 }
 .content-area-pf ul#tab li {
-    display: none; font-family:" Rockwell";
+    display: block !important; font-family:" Rockwell";
 }
 .content-area-pf ul#tab li.active {
       display: inline-block; 

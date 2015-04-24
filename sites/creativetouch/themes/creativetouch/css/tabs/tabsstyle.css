@@ -15,9 +15,9 @@ ul#tabs {
 	font-family:"Century Gothic"; font-size:16px; margin-right:8px;
 	 }
     ul#tabs li:hover {
-      background-color: #177C9C; color:#FFF }
+      background-color: #177C9C; color:#FFF !important }
     ul#tabs li.active {
-      background-color: #177C9C; color:#FFF }
+      background-color: #177C9C; color:#FFF !important }
 
 ul#tab {
   list-style-type: none;

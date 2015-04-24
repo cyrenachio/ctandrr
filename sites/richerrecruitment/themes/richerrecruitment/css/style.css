@@ -73,6 +73,9 @@ nav ul li a{
 nav ul li a:hover{
 	color: #e72d2e;;
 }
+nav ul li a:active,.active{
+	color: #e72d2e !important;;
+}
 .container{
 	width: 100%;
 	margin: 0;
@@ -261,7 +264,7 @@ footer{
 .copy-right{
 	float: left;
 	margin: 0px;
-	width: 40%;
+	width: 37%;
 	/*padding: 0px 0px 10px 0px;*/
 	color: #fff;
 	font-size:12px;
@@ -270,7 +273,7 @@ footer{
 }
 .footer-menu{
 	float: left;
-	width: 35%;
+	width: 32%;
 	margin: 0;
 	padding: 10px 0px 10px 0px;
 	text-align:left;
@@ -302,7 +305,7 @@ footer{
 .development-ref{
 	float:right;
 	margin: 0;
-	width:25%;
+	width:28%;
 	/*padding: 14px 0px 10px 0px;*/
 	color: #fff;
 	font-size:12px;
@@ -310,7 +313,7 @@ footer{
 	overflow: hidden;
 }
 .development-ref p{
-	 margin: 10px 0 0;
+	 margin: 12px 0 0;
 }
 .container-wrap{
 	width:950px;
@@ -351,6 +354,8 @@ footer{
 	background:#f3f3f3;
 	margin-bottom:3px;
 }
+.nav-side-bar ul li.first{ background:red !important; }
+.nav-side-bar ul li.first a{color:#FFF !important}
 .nav-side-bar ul li a{
 	text-decoration:none;
 	text-transform:uppercase;
@@ -424,7 +429,7 @@ footer{
 	font-size:23px;
 	font-family:Arial;
 	color:#606060;
-	line-height:1.4;
+	line-height:1.4; font-style:normal
 }
 .second-para{
 	width:100%;
@@ -732,9 +737,9 @@ ul li.leaf{
 	font-size: 16px;
 	padding-bottom: 10px;
 	font-family: Georgia;
-	font-style: italic; color:#5a5a5a
+	 color:#5a5a5a
 }
-.faq-content .faq-question-answer a{font-size: 16px;padding-bottom: 10px;font-family: Georgia;font-style: italic; color:#F00; text-decoration:none}
+.faq-content .faq-question-answer a{font-size: 16px;padding-bottom: 10px;font-family: Georgia;font-style: italic; color:#5A5A5A; text-decoration:none}
 
 #node-28{float: right;width: 645px;margin-bottom: 20px;}
 #block-block-12{width: 300px;}
