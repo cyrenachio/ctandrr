@@ -74,9 +74,9 @@ a {text-decoration: none;}
 }
 
 @media screen and (max-width: 768px) {
-    .active {
+   /* .active {
         display: block;
-    }
+    }*/
     .mobile-menu .nav > li {
         float: none;
     }
