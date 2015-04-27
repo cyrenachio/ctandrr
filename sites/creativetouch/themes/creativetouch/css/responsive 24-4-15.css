@@ -1,0 +1,122 @@
+@media all and (max-width:320px)and (min-width:241px){
+
+	.wrapper-m{ width:98%; overflow:hidden ; margin:0px auto}
+.header-wrap{ margin:0px auto; width:98%}
+	.below-content{ margin:0px auto; width:98%; }
+	.region-home-services-area .block{ margin:0px auto; float:none}
+	.Main-content{margin:0px auto; width:98%;}
+	.footer-wrap{margin:0px auto; width:98%;}
+	.region-content{ width:100% !important}
+	#node-13{ width:98%; margin:0px auto; float:none}
+	.field-textarea textarea{ width:97%}
+	.gallery-box{ float:none; margin:0px auto}
+	.sidebar-top{ display:none}
+	.sidebar{ margin:0px auto; float:none}
+	.inner-area-left{ width:95%; margin:0px auto}
+	.view-blog .views-row .views-field-body{ margin:0px auto; width:95%; float:none}
+.mobile-menu{ display:block; clear:both}
+.nav-desk{ display:none}
+.theme-default .nivoSlider img{ height:auto !important}
+	
+	}
+
+@media all and (max-width:360px)and (min-width:321px){
+
+	.wrapper-m{ width:98%; overflow:hidden ; margin:0px auto}
+	.header-wrap{ margin:0px auto; width:98%}
+	.below-content{ margin:0px auto; width:98%; }
+	.region-home-services-area .block{ margin:0px auto; float:none}
+	.Main-content{margin:0px auto; width:98%;}
+	.footer-wrap{margin:0px auto; width:98%;}
+	.region-content{ width:100% !important}
+	#node-13{ width:98%; margin:0px auto; float:none}
+	.field-textarea textarea{ width:97%}
+	.gallery-box{ float:none; margin:0px auto}
+	.sidebar-top{ display:none}
+	.sidebar{ margin:0px auto; float:none}
+	.inner-area-left{ width:95%; margin:0px auto}
+	.view-blog .views-row .views-field-body{ margin:0px auto; width:95%; float:none}
+
+	.mobile-menu{ display:block; clear:both}
+	.nav-desk{ display:none}
+	.theme-default .nivoSlider img{ height:auto !important}
+	}
+
+@media all and (max-width:480px)and (min-width:361px){
+
+	.wrapper-m{ width:98%; overflow:hidden ; margin:0px auto}
+
+.header-wrap{ margin:0px auto; width:98%}
+	.below-content{ margin:0px auto; width:98%; }
+	.region-home-services-area .block{ float:none; margin:0px auto }
+	.Main-content{margin:0px auto; width:98%;}
+	.footer-wrap{margin:0px auto; width:98%;}
+	.region-content{ width:100% !important}
+	#node-13{ width:98%; margin:0px auto; float:none}
+	.field-textarea textarea{ width:97%}
+	.gallery-box{ float:none; margin:0px auto}
+	.sidebar-top{ display:none}
+	.sidebar{ margin:0px auto; float:none}
+	.inner-area-left{ width:95%; margin:0px auto}
+	.view-blog .views-row .views-field-body{ margin:0px auto; width:95%; float:none}
+	.mobile-menu{ display:block; clear:both}
+	.nav-desk{ display:none}
+	.theme-default .nivoSlider img{ height:auto !important}
+	}
+
+@media all and (max-width:639px)and (min-width:481px){
+
+	.wrapper-m{ width:98%; overflow:hidden ; margin:0px auto}
+	.header-wrap{ margin:0px auto; width:98%}
+	.below-content{ margin:0px auto; width:98%; }
+	.region-home-services-area .block{ margin:0px auto; float:none}
+	.Main-content{margin:0px auto; width:98%;}
+	.footer-wrap{margin:0px auto; width:98%;}
+	.region-content{ width:100% !important}
+	#node-13{ width:98%; margin:0px auto; float:none}
+	.field-textarea textarea{ width:97%}
+	.sidebar-top{ display:none}
+	.sidebar{ margin:0px auto; float:none}
+	.inner-area-left{ width:95%; margin:0px auto}
+	.view-blog .views-row .views-field-body{ margin:0px auto; width:95%; float:none}
+
+	.theme-default .nivoSlider img{ height:auto !important}
+	}
+
+@media all and (max-width:768px)and (min-width:640px){
+
+	.wrapper-m{ width:98%; overflow:hidden ; margin:0px auto}
+		.header-wrap{ margin:0px auto; width:98%}
+	.below-content{ margin:0px auto; width:98%; }
+	.region-home-services-area .block{ width:30%; }
+	.Main-content{margin:0px auto; width:98%;}
+	.footer-wrap{margin:0px auto; width:98%;}
+	.region-content{ width:100% !important}
+	#node-13{ width:98%; margin:0px auto; float:none}
+	.field-textarea textarea{ width:97%}
+	.theme-default .nivoSlider img{ height:auto !important}
+
+	
+	}
+
+@media all and (max-width:800px)and (min-width:769px){
+
+	.wrapper-m{ width:98%; overflow:hidden ; margin:0px auto}
+
+	
+	}
+
+@media all and (max-width:980px)and (min-width:800px){
+
+	.wrapper-m{ width:98%; overflow:hidden ; margin:0px auto}
+
+	
+	}
+
+@media all and (max-width:1280px)and (min-width:980px){
+
+	
+
+
+
+	}

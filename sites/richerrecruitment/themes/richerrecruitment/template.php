@@ -60,6 +60,17 @@ function richerrecruitment_preprocess_html(&$variables) {
   
 }
 
+
+/**
+ * Implements template_preprocess_hook().
+ */
+function richerrecruitment_preprocess_nivo_slider_wrapper(&$variables) {
+  $variables['theme'] = variable_get('nivo_slider_theme', 'default');
+  $variables['banners'] = nivo_slider_slider();
+  $variables['html_captions'] = variable_get('nivo_slider_banner_html_captions', '');
+}
+
+
 function richerrecruitment_form_alter(&$form, &$form_state, $form_id) {
   if ($form_id == 'search_block_form') {
     $form['search_block_form']['#title'] = t('Search'); // Change the text on the label element

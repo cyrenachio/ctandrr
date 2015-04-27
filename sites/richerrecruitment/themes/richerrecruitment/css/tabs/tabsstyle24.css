@@ -1,0 +1,40 @@
+.content-area-pf ul#tabs {
+  list-style-type: none;
+  margin: 0 0px 30px 0px;
+  padding: 0px;
+  text-align:left;
+}
+.content-area-pf ul#tabs li {	
+    display: inline;
+    background-color: #f2f2f2;
+    padding: 7px 29px;
+    margin:0px 7px 0px 0px;
+    color: #fff;
+    cursor: pointer; 
+	border-radius:5px;
+	color:#666666;
+
+	font-size:16px; font-family:" Rockwell";
+}
+.content-area-pf ul#tabs li:hover {
+      background-color:#FF0200;
+	  color:#fff;
+}
+.content-area-pf ul#tabs li.active {
+      background-color: #FF0200; 
+	  color:#fff;
+	  
+}
+
+.content-area-pf ul#tab {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.content-area-pf ul#tab li {
+    display: none; font-family:" Rockwell";
+}
+.content-area-pf ul#tab li.active {
+      display: inline-block; 
+}
+

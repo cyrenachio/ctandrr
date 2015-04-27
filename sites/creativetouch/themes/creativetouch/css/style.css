@@ -677,3 +677,5 @@ margin-bottom: 25px;}
 #block-blog-recent .more-link{ display:none}
 
 .mobile-menu{ display:none}
+.nivo-prevNav{background:url(../images/previous.png) no-repeat !important ; width:63px !important; height:62px !important}
+.nivo-nextNav{background:url(../images/next.png) no-repeat !important ;  width:63px !important; height:62px !important}
