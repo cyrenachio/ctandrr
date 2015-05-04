@@ -96,7 +96,24 @@
           <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo"> <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" /> </a>
           <?php endif; ?>
         </div>
+        <div class="mobile-menu"> <a class="toggleMenu" href="#">&#9776;</a>
+       <?php if ($main_menu): ?>
+            <?php print theme('links__system_main_menu', array(
+                                  'links' => $main_menu,
+                                  'attributes' => array(
+                                    'id' => 'main-menu-links',
+                                    'class' => array('nav', 'clearfix'),
+                                  ),
+                                  'heading' => array(
+                                    'text' => t('Main menu'),
+                                    'level' => 'h2',
+                                    'class' => array('element-invisible'),
+                                  ),
+                                )); ?>
+            <?php endif; ?>
+    </div>
         <div class="menu-area">
+        <div class="nav-desk">
           <nav>
             <?php if ($main_menu): ?>
             <?php print theme('links__system_main_menu', array(
@@ -113,6 +130,7 @@
                                 )); ?>
             <?php endif; ?>
           </nav>
+         </div>
         </div>
       </div>
     </div>
@@ -218,3 +236,4 @@
   <!-- text doc --> 
 </div>
 <!-- /#page, /#page-wrapper --> 
+<script type="text/javascript" src="<?php echo base_path().path_to_theme();?>/js/script.js"></script> 

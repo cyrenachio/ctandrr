@@ -527,7 +527,7 @@ footer{
 .pf-imgs-text a{
 	text-decoration:none;
 	color:#253875;
-	font-family:Rockwell;
+	font-family:"Century Gothic";
 	font-size:18px;
 	
 }
@@ -767,5 +767,7 @@ ul li.leaf{
 .nivo-prevNav{background:url(../images/arrow-left.png) no-repeat !important ; width:63px !important; height:62px !important}
 .nivo-nextNav{background:url(../images/arrow-right.png) no-repeat !important ;  width:63px !important; height:62px !important}
 
-#slider .nivo-caption{position: absolute;width: 970px;height: 130px;top: 110px;left: 260px;padding: 0px;text-align: left;line-height: 42px;font-family: Tahoma;font-weight: bold;font-size: 36px;color: #FFFFFF;background:none;opacity:1;}
+#slider .nivo-caption{position: absolute;width: 970px;height: 130px;top: 110px;left: 170px;padding: 0px;text-align: left;line-height: 42px;font-family: Tahoma;font-weight: bold;font-size: 28px;color: #FFFFFF;background:none;opacity:1;}
 .more-about{ background:url(../images/more-about.jpg) no-repeat; width:210px ; height:47px; margin-top:20px !important; float:left; position:absolute; z-index:99999;left:260px; top:200px;}
+
+.mobile-menu{ display:none}

@@ -13,8 +13,8 @@ function richerrecruitment_preprocess_html(&$variables) {
 	drupal_add_js(drupal_get_path('theme', 'richerrecruitment'). '/js/jquery-1.11.1.min.js', $options);
 	drupal_add_js(drupal_get_path('theme', 'richerrecruitment'). '/js/jquery-migrate-1.2.1.js', $options);
 	
-	
-
+	drupal_add_css(path_to_theme() . '/css/rmenustyle.css', array('group' => CSS_THEME, 'preprocess' => FALSE));
+	drupal_add_css(path_to_theme() . '/css/responsive.css', array('group' => CSS_THEME, 'preprocess' => FALSE));
 	
 
   if (!empty($variables['page']['top_search'])){

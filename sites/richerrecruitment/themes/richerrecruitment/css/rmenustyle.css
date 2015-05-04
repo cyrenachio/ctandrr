@@ -1,0 +1,94 @@
+nav, ul, li, a  {margin: 0; padding: 0;}
+
+a {text-decoration: none;}
+.toggleMenu {
+    display:  none;
+    background: #fff;
+    padding: 7px 15px;
+    color:  #2C098D; font-size:36px;; font-weight:bold
+}
+.mobile-menu .nav {
+    list-style: none;
+     *zoom: 1;
+     background:#5F6062;
+}
+.mobile-menu .nav:before,
+.mobile-menu .nav:after {
+    content: " "; 
+    display: table; 
+}
+.mobile-menu .nav:after {
+    clear: both;
+}
+.mobile-menu .nav ul {
+    list-style: none;
+    width: 9em;
+}
+.mobile-menu .nav a {
+    padding: 5px 15px;
+    color:#fff;
+}
+.mobile-menu .nav li {
+    position: relative;
+}
+.mobile-menu .nav > li {
+    float: left;
+    border-top: 1px solid #104336;
+}
+.mobile-menu .nav > li > a:hover{ background:#968230}
+.mobile-menu .nav > li > .parent {
+    background-image: url("images/downArrow.png");
+    background-repeat: no-repeat;
+    background-position: right;
+}
+.mobile-menu .nav > li > a {
+    display: block;
+}
+.mobile-menu .nav li  ul {
+    position: absolute;
+    left: -9999px;
+}
+.nav > li.hover > ul {
+    left: 0;
+}
+.mobile-menu .nav li li.hover ul {
+    left: 100%;
+    top: 0;
+}
+.mobile-menu .nav li li a {
+    display: block;
+    background: #1d7a62;
+    position: relative;
+    z-index:100;
+    border-top: 1px solid #175e4c;
+}
+.mobile-menu .nav li li li a {
+    background:#249578;
+    z-index:200;
+    border-top: 1px solid #1d7a62;
+}
+
+@media screen and (max-width: 768px) {
+   /* .active {
+        display: block;
+    }*/
+    .mobile-menu .nav > li {
+        float: none;
+    }
+    .mobile-menu .nav > li > .parent {
+        background-position: 95% 50%;
+    }
+    .mobile-menu .nav li li .parent {
+        background-image: url("images/downArrow.png");
+        background-repeat: no-repeat;
+        background-position: 95% 50%;
+    }
+    .mobile-menu .nav ul {
+        display: block;
+        width: 100%;
+    }
+   .mobile-menu .nav > li.hover > ul , .nav li li.hover ul {
+        position: static;
+    }
+
+}
