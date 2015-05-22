@@ -8,10 +8,19 @@ function creativetouch_preprocess_html(&$variables) {
 	$options = array(
     'group' => JS_THEME,
 	);
+	
 	drupal_add_js(drupal_get_path('theme', 'creativetouch'). '/js/jquery-1.11.1.min.js', $options);
+	
 	drupal_add_js('http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.js', $options);
+	
 	drupal_add_js(drupal_get_path('theme', 'creativetouch'). '/js/jquery-migrate-1.2.1.js', $options);
 	
+	drupal_add_js(drupal_get_path('theme', 'creativetouch'). '/fancybox/jquery.mousewheel-3.0.4.pack.js', array('group' => JS_THEME));
+	
+	drupal_add_js(drupal_get_path('theme', 'creativetouch'). '/fancybox/jquery.fancybox-1.3.4.pack.js', array('group' => JS_THEME));
+	
+	drupal_add_css(path_to_theme() . '/fancybox/jquery.fancybox-1.3.4.css', array('group' => CSS_THEME, 'preprocess' => FALSE));
+
 	drupal_add_css(path_to_theme() . '/css/rmenustyle.css', array('group' => CSS_THEME, 'preprocess' => FALSE));
 	
 	drupal_add_css(path_to_theme() . '/css/responsive.css', array('group' => CSS_THEME, 'preprocess' => FALSE));

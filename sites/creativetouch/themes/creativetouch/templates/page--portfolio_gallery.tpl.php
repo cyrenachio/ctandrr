@@ -84,11 +84,14 @@
  * @see bartik_process_page()
  * @see html.tpl.php
  */
- 
+
 drupal_add_css(path_to_theme() . '/css/tabs/tabsstyle.css', array('group' => CSS_THEME,'preprocess' => FALSE));
+
 $images = '';
 ?>
+<script type="text/javascript">
 
+</script>
 <header>
   <div class="header">
   <div class="header-wrap">
@@ -177,17 +180,19 @@ $images = '';
 			 //for image
 				if(isset($images->field_portfolio_image[$images->language][0]['uri'])){
 				 $style = 'medium';
+				  $style2 = 'large';
 				 $filePath = $images->field_portfolio_image[$images->language][0]['uri'];
 				 $imageSrc = image_style_url($style, $filePath);
+				 $imageFullSrc = image_style_url($style2, $filePath);
 				}else
 				{
 				 $imageSrc = base_path().path_to_theme().'/images/default.jpg';
 				}
 				?>
-          <div class="gallery-box">
-            <div class="img"> <a href="<?php echo $P_URL;?>" target="_blank" title="<?php echo $images->title;?>"><img title="<?php echo $images->title;?>" src="<?php echo $imageSrc;?>" /></a> </div>
-            <div class="product-title"> <a href="<?php echo $P_URL;?>" target="_blank" title="<?php echo $images->title;?>"><?php echo $images->title;?></a> </div>
-          </div>
+              <div class="gallery-box">
+                <div class="img"> <a rel="all" href="<?php echo $imageFullSrc;?>" title="<?php echo $images->title;?>"><img title="<?php echo $images->title;?>" src="<?php echo $imageSrc;?>" /></a> </div>
+                <div class="product-title"> <?php echo $images->title;?></div>
+              </div>
           <?php
 			 }
 		}
@@ -203,7 +208,6 @@ $images = '';
              $GalleryArr = taxonomy_select_nodes($tid = $cat->tid, $pager = TRUE, $limit = 10, $order = array('t.sticky' => 'DESC', 't.created' => 'DESC'));
 			 foreach($GalleryArr as $key=>$image){
 			 $images = node_load($nid = NULL, $vid = $image, $reset = FALSE);
-
 			 //for URL
 			 if(isset($images->field_portfolio_url[$images->language][0]['value'])){
 				$P_URL = $images->field_portfolio_url[$images->language][0]['value'];
@@ -213,16 +217,19 @@ $images = '';
 			 //for image
 				if(isset($images->field_portfolio_image[$images->language][0]['uri'])){
 				 $style = 'medium';
+				 $style2 = 'large';
 				 $filePath = $images->field_portfolio_image[$images->language][0]['uri'];
 				 $imageSrc = image_style_url($style, $filePath);
+				 $imageFullSrc = image_style_url($style2, $filePath);
+				 
 				}else
 				{
 				 $imageSrc = base_path().path_to_theme().'/images/default.jpg';
 				}
 				?>
           <div class="gallery-box">
-            <div class="img"> <a href="<?php echo $P_URL;?>"><img src="<?php echo $imageSrc;?>" /></a> </div>
-            <div class="product-title"> <a href="<?php echo $P_URL;?>"><?php echo $images->title;?></a> </div>
+            <div class="img"> <a rel="<?php echo $name = str_replace(' ', '_',$cat->name);?>" href="<?php echo $imageFullSrc;?>"><img src="<?php echo $imageSrc;?>" /></a> </div>
+            <div class="product-title"><?php echo $images->title;?></div>
           </div>
           <?php
 			 }
@@ -249,7 +256,31 @@ $(document).ready(function(){
             $("ul#tab li.active").removeClass("active");
             $("ul#tab li:nth-child("+nthChild+")").addClass("active");
         }
-    });
+    });		
+
+$("a[rel=all]").fancybox({
+	'transitionIn'		: 'none',
+	'transitionOut'		: 'none',
+	'titlePosition' 	: 'over',
+	'titleFormat'		: function(title, currentArray, currentIndex, currentOpts) {
+		return '<span id="fancybox-title-over">Image ' + (currentIndex + 1) + ' / ' + currentArray.length + (title.length ? ' &nbsp; ' + title : '') + '</span>';
+	}
+});
+ <?php
+foreach($categoryGArr as $cat){?>
+		$("a[rel=<?php echo $name = str_replace(' ', '_',$cat->name);?>]").fancybox({
+	'transitionIn'		: 'none',
+	'transitionOut'		: 'none',
+	'titlePosition' 	: 'over',
+	'titleFormat'		: function(title, currentArray, currentIndex, currentOpts) {
+		return '<span id="fancybox-title-over">Image ' + (currentIndex + 1) + ' / ' + currentArray.length + (title.length ? ' &nbsp; ' + title : '') + '</span>';
+	}
+});
+		<?php
+		}
+        ?>
+
+
 });
 </script>
 <footer>
