@@ -136,6 +136,7 @@
     </div>
   </div>
 </header>
+<div class="clr"></div>
 <div class="container">
   <?php if ($messages): ?>
   <div id="messages">

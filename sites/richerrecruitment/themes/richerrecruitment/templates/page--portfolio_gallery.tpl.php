@@ -139,6 +139,7 @@ $images = '';
     </div>
   </div>
 </header>
+<div class="clr"></div>
 <?php if ($messages): ?>
 <div id="messages">
   <div class="section clearfix"> <?php print $messages; ?> </div>

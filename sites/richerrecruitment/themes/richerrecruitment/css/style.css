@@ -7,6 +7,7 @@ header{
 	padding: 0;
 	width: 100%;
 }
+.clr{clear: both;}
 .header-container{
 	width: 100%;
 	margin: 0;
