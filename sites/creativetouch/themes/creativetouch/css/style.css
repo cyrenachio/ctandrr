@@ -679,3 +679,8 @@ margin-bottom: 25px;}
 .mobile-menu{ display:none}
 .nivo-prevNav{background:url(../images/previous.png) no-repeat !important ; width:63px !important; height:62px !important}
 .nivo-nextNav{background:url(../images/next.png) no-repeat !important ;  width:63px !important; height:62px !important}
+
+.webform-component--industries{float: right;width: 278px;margin-top: 11px;}
+.webform-component--home{float: right;width: 300px;}
+.webform-component--commercial{float: right;width: 300px;clear: both;}
+.webform-component--3{ width:300px;}
