@@ -154,7 +154,7 @@ $images = '';
     <div class="gallery"> <i>Gallery</i> </div>
     <div class="tabs-area">
       <ul id="tabs">
-        <li class="active">All</li>
+        <li class="active" style="display:none">All</li>
         <?php
         foreach($categoryGArr as $cat){
 			echo '<li>'.$cat->name.'</li>';
