@@ -771,3 +771,9 @@ ul li.leaf{
 .more-about{ background:url(../images/more-about.jpg) no-repeat; width:210px ; height:47px; margin-top:20px !important; float:left; position:absolute; z-index:99999;left:260px; top:200px;}
 
 .mobile-menu{ display:none}
+
+.webform-component--nature-of-enquiry-{float: right;width: 278px;margin-top: 11px;}
+.webform-component--domestic-helper{float: left;width: 300px;clear: both;margin-right: 43px;}
+.webform-component--construction{float: left;width: 300px;}
+.webform-component--manufacturing{float: left;width: 300px;margin-right: 43px;}
+.webform-component--services{float: left;width: 300px;}
